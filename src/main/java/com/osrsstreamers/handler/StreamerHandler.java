@@ -51,15 +51,28 @@ public class StreamerHandler {
 
     private Gson gson = new Gson();
 
+    private VerifiedStreamers verifiedStreamers;
+
     public StreamerHandler(Client client, OsrsStreamersConfig config) {
         this.client = client;
         this.config = config;
+        this.verifiedStreamers = new VerifiedStreamers();
         this.nearbyPlayers = new HashMap<>();
         this.addAllNearbyPlayers();
     }
 
     private void addAllNearbyPlayers() {
-        this.client.getPlayers().forEach(player -> nearbyPlayers.put(player.getName(), new NearbyPlayer()));
+        this.client.getPlayers().forEach(player -> {
+            this.addNewNearbyPlayer(player.getName());
+        });
+    }
+
+    private void addNewNearbyPlayer(String rsn) {
+        if (verifiedStreamers.isVerifiedStreamer(rsn)) {
+            nearbyPlayers.put(rsn, new NearbyPlayer(verifiedStreamers.getTwitchName(rsn)));
+        } else {
+            nearbyPlayers.put(rsn, new NearbyPlayer());
+        }
     }
 
     @Subscribe
@@ -99,7 +112,7 @@ public class StreamerHandler {
         }
 
         if (Objects.isNull(nearbyPlayer)) {
-            nearbyPlayers.put(name, new NearbyPlayer());
+            this.addNewNearbyPlayer(name);
         } else {
             nearbyPlayer.setLastSeen(ZonedDateTime.now());
         }
@@ -120,9 +133,9 @@ public class StreamerHandler {
 
     }
 
-    private void getTwitchStreams(List<String> names) {
+    private void getTwitchStreams(List<NearbyPlayer> nearbyStreamers) {
         HttpUrl.Builder httpBuilder = HttpUrl.parse(TWITCH_API_URL).newBuilder();
-        names.stream().filter(name -> !name.contains(" ")).collect(Collectors.toList()).forEach(name -> httpBuilder.addQueryParameter(TWITCH_USER_QUERY_FIELD, name));
+        nearbyStreamers.forEach(nearbyStreamer -> httpBuilder.addQueryParameter(TWITCH_USER_QUERY_FIELD, nearbyStreamer.twitchName));
 
         Request request = new Request.Builder().url(httpBuilder.build()).addHeader("Client-ID", TWITCH_CLIENT_ID).addHeader("Authorization", "Bearer " + config.userAccessToken()).build();
 
@@ -135,14 +148,14 @@ public class StreamerHandler {
             InputStream in = response.body().byteStream();
             TwitchApiResponse twitchApiResponse = gson.fromJson(new InputStreamReader(in), TwitchApiResponse.class);
 
-            for (String name : names) {
-                Optional<TwitchStream> optionalTwitchStream = twitchApiResponse.data.stream().filter(twitchStream -> twitchStream.getUser_name().equalsIgnoreCase(name)).findFirst();
+            for (NearbyPlayer streamer : nearbyStreamers) {
+                Optional<TwitchStream> optionalTwitchStream = twitchApiResponse.data.stream().filter(twitchStream -> twitchStream.getUser_name().equalsIgnoreCase(streamer.twitchName)).findFirst();
                 if (optionalTwitchStream.isPresent()) {
-                    this.nearbyPlayers.get(name).setStatus(StreamStatus.LIVE);
-                    log.debug("There is a live stream associated with RSN: {}", name);
+                    streamer.setStatus(StreamStatus.LIVE);
+                    log.debug("Streamer {} is currently live streaming", streamer.twitchName);
                 } else {
-                    this.nearbyPlayers.get(name).setStatus(StreamStatus.NO_STREAM);
-                    log.debug("There are no streams associated with RSN: {}", name);
+                    streamer.setStatus(StreamStatus.NOT_LIVE);
+                    log.debug("Streamer {} is currently NOT live streaming", streamer.twitchName);
                 }
             }
             response.body().close();
@@ -152,8 +165,8 @@ public class StreamerHandler {
         }
     }
 
-    private void openTwitchStream(String twitchName) {
-        LinkBrowser.browse(TWITCH_BASE + "/" + twitchName);
+    private void openTwitchStream(String rsn) {
+        LinkBrowser.browse(TWITCH_BASE + "/" + verifiedStreamers.getTwitchName(rsn));
     }
 
     public void removeOldNearbyPlayers() {
@@ -163,15 +176,15 @@ public class StreamerHandler {
         }).collect(Collectors.toMap(p -> p.getKey(), p -> p.getValue()));
     }
 
-    public void fetchStreamStatusOfUndeterminedNearbyPlayers() {
-        List<String> undeterminedPlayerNames = nearbyPlayers.entrySet().stream()
-                .filter(stringNearbyPlayerEntry -> stringNearbyPlayerEntry.getValue().getStatus().equals(StreamStatus.UNDETERMINED))
-                .map(stringNearbyPlayerEntry -> stringNearbyPlayerEntry.getKey())
+    public void fetchStreamStatusOfUndeterminedStreamers() {
+        List<NearbyPlayer> undeterminedStreamers = nearbyPlayers.entrySet().stream()
+                .filter(stringNearbyPlayerEntry -> stringNearbyPlayerEntry.getValue().getStatus().equals(StreamStatus.STREAMER))
+                .map(stringNearbyPlayerEntry -> stringNearbyPlayerEntry.getValue())
                 .limit(TWITCH_API_USER_SEARCH_LIMIT)
                 .collect(Collectors.toList());
 
-        if (!undeterminedPlayerNames.isEmpty()) {
-            this.getTwitchStreams(undeterminedPlayerNames);
+        if (!undeterminedStreamers.isEmpty()) {
+            this.getTwitchStreams(undeterminedStreamers);
         }
     }
 

@@ -6,10 +6,7 @@ import javax.inject.Inject;
 import com.osrsstreamers.handler.StreamerHandler;
 import com.osrsstreamers.handler.StreamingPlayerOverlay;
 import lombok.extern.slf4j.Slf4j;
-import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
-import net.runelite.api.GameState;
-import net.runelite.api.events.GameStateChanged;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.eventbus.Subscribe;
@@ -101,7 +98,7 @@ public class OsrsStreamersPlugin extends Plugin
 	public void checkNearbyPlayers() {
 		if (Objects.nonNull(this.streamerHandler)) {
 			this.streamerHandler.removeOldNearbyPlayers();
-			this.streamerHandler.fetchStreamStatusOfUndeterminedNearbyPlayers();
+			this.streamerHandler.fetchStreamStatusOfUndeterminedStreamers();
 		}
 	}
 }

@@ -1,7 +1,8 @@
 package com.osrsstreamers.handler;
 
 public enum StreamStatus {
-    UNDETERMINED,
-    NO_STREAM,
+    NOT_STREAMER,
+    STREAMER,
+    NOT_LIVE,
     LIVE
 }
