@@ -3,13 +3,14 @@
     <title>OSRS Streamers user access token generation</title>
 </head>
 <body>
+<a href="" id="authorize">Authorize</a>
 <div id="access_token"></div>
 <div id="extra_data"></div>
 
 <script type="text/javascript">
         // client ids are not confidential
         var client_id = 'ifhhbwyqdp5p9fmhn33wvlsufsemp8';
-        var redirect = ' https://rhoiyds.github.io/osrs-streamers/';
+        var redirect = ' https://rhoiyds.github.io/osrs-streamers/index.html';
 
         document.getElementById('authorize').setAttribute('href', 'https://id.twitch.tv/oauth2/authorize?client_id=' + client_id + '&redirect_uri=' + encodeURIComponent(redirect) + '&response_type=token')
         document.getElementById('access_token').textContent = '';
