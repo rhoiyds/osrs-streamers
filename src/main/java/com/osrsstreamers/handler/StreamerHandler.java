@@ -142,6 +142,7 @@ public class StreamerHandler {
         try  {
             Response response = RuneLiteAPI.CLIENT.newCall(request).execute();
             if (!response.isSuccessful()) {
+                response.body().close();
                 log.debug("Error while retrieving stream information from Twitch API: {}", response.body());
                 return;
             }
