@@ -22,7 +22,7 @@ public interface OsrsStreamersConfig extends Config
 		position = 2,
 		keyName = "userAccessToken",
 		name = "Token",
-		description = "Your access token allowing Runelite to check Twitch stream status on your behalf"
+		description = "Twitch access token generated from https://rhoiyds.github.io/osrs-streamers/"
 	)
 	default String userAccessToken()
 	{

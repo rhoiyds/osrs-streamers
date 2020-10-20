@@ -65,7 +65,7 @@ public class OsrsStreamersPlugin extends Plugin
 
 	private void startHandlingTwitchStreams() {
 		// If its turned on with valid thing twitchConfig.streams()
-		if (Objects.isNull(streamerHandler) && config.checkIfLive() && Objects.nonNull(config.userAccessToken())) {
+		if (Objects.isNull(streamerHandler)) {
 			streamerHandler = new StreamerHandler(client, config);
 			eventBus.register(streamerHandler);
 			this.streamingPlayerOverlay.streamerHandler = streamerHandler;
@@ -81,11 +81,9 @@ public class OsrsStreamersPlugin extends Plugin
 			return;
 		}
 
-//		if (twitchConfig.streams()) {
-//			startHandlingTwitchStreams();
-//		} else {
-//			stopHandlingTwitchStreams();
-//		}
+		stopHandlingTwitchStreams();
+		startHandlingTwitchStreams();
+		
 	}
 
 	@Provides
@@ -98,7 +96,9 @@ public class OsrsStreamersPlugin extends Plugin
 	public void checkNearbyPlayers() {
 		if (Objects.nonNull(this.streamerHandler)) {
 			this.streamerHandler.removeOldNearbyPlayers();
-			this.streamerHandler.fetchStreamStatusOfUndeterminedStreamers();
+			if (config.checkIfLive() && Objects.nonNull(config.userAccessToken())) {
+				this.streamerHandler.fetchStreamStatusOfUndeterminedStreamers();
+			}
 		}
 	}
 }
