@@ -43,7 +43,7 @@ public class OsrsStreamersPlugin extends Plugin
 	private StreamerHandler streamerHandler;
 
 	@Override
-	protected void startUp() throws Exception
+	protected void startUp()
 	{
 		startHandlingTwitchStreams();
 	}
@@ -63,7 +63,7 @@ public class OsrsStreamersPlugin extends Plugin
 		}
 	}
 
-	private void startHandlingTwitchStreams() throws Exception {
+	private void startHandlingTwitchStreams() {
 		// If its turned on with valid thing twitchConfig.streams()
 		if (Objects.isNull(streamerHandler)) {
 			streamerHandler = new StreamerHandler(client, config);
@@ -74,7 +74,7 @@ public class OsrsStreamersPlugin extends Plugin
 	}
 
 	@Subscribe
-	public void onConfigChanged(ConfigChanged configChanged) throws Exception
+	public void onConfigChanged(ConfigChanged configChanged)
 	{
 		if (!configChanged.getGroup().equals("osrsstreamers"))
 		{
