@@ -53,7 +53,7 @@ public class StreamerHandler {
 
     private VerifiedStreamers verifiedStreamers;
 
-    public StreamerHandler(Client client, OsrsStreamersConfig config) {
+    public StreamerHandler(Client client, OsrsStreamersConfig config) throws Exception {
         this.client = client;
         this.config = config;
         this.verifiedStreamers = new VerifiedStreamers();
