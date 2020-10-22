@@ -2,11 +2,13 @@ package com.osrsstreamers;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import com.osrsstreamers.handler.StreamerHandler;
 import com.osrsstreamers.handler.StreamingPlayerOverlay;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
+import net.runelite.api.events.CommandExecuted;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.EventBus;
 import net.runelite.client.eventbus.Subscribe;
@@ -40,6 +42,10 @@ public class OsrsStreamersPlugin extends Plugin
 	@Inject
 	private StreamingPlayerOverlay streamingPlayerOverlay;
 
+	@Inject
+	@Named("developerMode")
+	boolean developerMode;
+
 	private StreamerHandler streamerHandler;
 
 	@Override
@@ -64,7 +70,6 @@ public class OsrsStreamersPlugin extends Plugin
 	}
 
 	private void startHandlingTwitchStreams() {
-		// If its turned on with valid thing twitchConfig.streams()
 		if (Objects.isNull(streamerHandler)) {
 			streamerHandler = new StreamerHandler(client, config);
 			eventBus.register(streamerHandler);
@@ -99,6 +104,18 @@ public class OsrsStreamersPlugin extends Plugin
 			if (config.checkIfLive() && Objects.nonNull(config.userAccessToken())) {
 				this.streamerHandler.fetchStreamStatusOfUndeterminedStreamers();
 			}
+		}
+	}
+
+	@Subscribe
+	public void onCommandExecuted(CommandExecuted commandExecuted)
+	{
+		if (developerMode && commandExecuted.getCommand().equals("stream"))
+		{
+			if ("add".equals(commandExecuted.getArguments()[0])) {
+				streamerHandler.addStreamerFromConsole(commandExecuted.getArguments()[1], commandExecuted.getArguments()[2]);
+			}
+
 		}
 	}
 }

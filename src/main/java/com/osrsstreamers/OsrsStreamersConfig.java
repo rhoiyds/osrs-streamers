@@ -22,7 +22,8 @@ public interface OsrsStreamersConfig extends Config
 		position = 2,
 		keyName = "userAccessToken",
 		name = "Token",
-		description = "Twitch access token generated from https://rhoiyds.github.io/osrs-streamers/"
+		description = "Twitch access token generated from https://rhoiyds.github.io/osrs-streamers/",
+		secret = true
 	)
 	default String userAccessToken()
 	{

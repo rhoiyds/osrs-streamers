@@ -40,7 +40,7 @@ public class StreamerHandler {
     private static final String TWITCH_CLIENT_ID = "ifhhbwyqdp5p9fmhn33wvlsufsemp8";
     private static final String TWITCH_API_URL = "https://api.twitch.tv/helix/streams";
     private static final String TWITCH_USER_QUERY_FIELD = "user_login";
-    private static final int MAX_UNSEEN_DURATION_BEFORE_REMOVAL = 3;
+    private static final int MAX_UNSEEN_DURATION_BEFORE_REMOVAL = 1;
     private static final Long TWITCH_API_USER_SEARCH_LIMIT = 100L;
 
     private Map<String, NearbyPlayer> nearbyPlayers;
@@ -61,6 +61,11 @@ public class StreamerHandler {
         this.addAllNearbyPlayers();
     }
 
+    public void addStreamerFromConsole(String rsn, String twitchName) {
+        this.verifiedStreamers.rsnToTwitchLoginMap.put(rsn, twitchName);
+        this.addNewNearbyPlayer(rsn);
+    }
+
     private void addAllNearbyPlayers() {
         this.client.getPlayers().forEach(player -> {
             this.addNewNearbyPlayer(player.getName());
@@ -68,6 +73,7 @@ public class StreamerHandler {
     }
 
     private void addNewNearbyPlayer(String rsn) {
+        nearbyPlayers.remove(rsn);
         if (verifiedStreamers.isVerifiedStreamer(rsn)) {
             nearbyPlayers.put(rsn, new NearbyPlayer(verifiedStreamers.getTwitchName(rsn)));
         } else {
@@ -180,7 +186,7 @@ public class StreamerHandler {
     public void fetchStreamStatusOfUndeterminedStreamers() {
         List<NearbyPlayer> undeterminedStreamers = nearbyPlayers.entrySet().stream()
                 .filter(stringNearbyPlayerEntry -> stringNearbyPlayerEntry.getValue().getStatus().equals(StreamStatus.STREAMER))
-                .map(stringNearbyPlayerEntry -> stringNearbyPlayerEntry.getValue())
+                .map(Map.Entry::getValue)
                 .limit(TWITCH_API_USER_SEARCH_LIMIT)
                 .collect(Collectors.toList());
 
