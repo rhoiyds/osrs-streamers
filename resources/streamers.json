@@ -1,81 +1,379 @@
 [
   {
     "twitchName": "Mmorpg",
-    "characterNames": ["Mmorpg"]
-  }, {
-  "twitchName": "itswill",
-  "characterNames": ["Suede"]
-}, {
-  "twitchName": "Sicknerd",
-  "characterNames": ["Sicknerd", "AgileFlea53"]
-}, {
-  "twitchName": "Odablock",
-  "characterNames": ["Bald"]
-}, {
-  "twitchName": "SparcMac",
-  "characterNames": ["Sparc Mac"]
-}, {
-  "twitchName": "Alfie",
-  "characterNames": ["Alfate"]
-}, {
-  "twitchName": "WatchGamesTV",
-  "characterNames": ["MemesTV"]
-}, {
-  "twitchName": "Rigondeaux",
-  "characterNames": ["Rentrex"]
-}, {
-  "twitchName": "LucidDream",
-  "characterNames": ["Dream Realm"]
-}, {
-  "twitchName": "Alkan",
-  "characterNames": ["Number1 Bass"]
-}, {
-  "twitchName": "Ea_Enkii",
-  "characterNames": ["Ea_Enkii"]
-}, {
-  "twitchName": "Puggin",
-  "characterNames": ["pug n"]
-},  {
-  "twitchName": "poisonedpotion",
-  "characterNames": ["HardcorePP2"]
-},  {
-  "twitchName": "itsPrezzyG",
-  "characterNames": ["itsPrezzyG"]
-},  {
-  "twitchName": "RiceCup",
-  "characterNames": ["Mr Iron Bar"]
-},  {
-  "twitchName": "The_Olive",
-  "characterNames": ["Iron Olive"]
-},  {
-  "twitchName": "AColdOne",
-  "characterNames": ["Car Pen Tree"]
-},  {
-  "twitchName": "Onahop",
-  "characterNames": ["Ahop"]
-}, {
-  "twitchName": "Lil_cards",
-  "characterNames": ["Mercedes xox"]
-}, {
-  "twitchName": "dirtmess",
-  "characterNames": ["Dirt Mess"]
-}, {
-  "twitchName": "MarquezOSRS",
-  "characterNames": ["MarquezIRON"]
-}, {
-  "twitchName": "Armondega",
-  "characterNames": ["Armondega"]
-}, {
-  "twitchName": "lilderra",
-  "characterNames": ["Derra"]
-}, {
-  "twitchName": "TheEdB0ys",
-  "characterNames": ["85dakota85"]
-}, {
-  "twitchName": "Fat_Clouds",
-  "characterNames": ["Fat Clouds"]
-}, {
-  "twitchName": "blowpipe_osrs",
-  "characterNames": ["PEACH MANG0"]
-}
+    "characterNames": [
+      "Mmorpg"
+    ]
+  },
+  {
+    "twitchName": "itswill",
+    "characterNames": [
+      "Suede"
+    ]
+  },
+  {
+    "twitchName": "Sicknerd",
+    "characterNames": [
+      "Sicknerd",
+      "AgileFlea53"
+    ]
+  },
+  {
+    "twitchName": "Odablock",
+    "characterNames": [
+      "Bald",
+      "Sat"
+    ]
+  },
+  {
+    "twitchName": "SparcMac",
+    "characterNames": [
+      "Sparc Mac"
+    ]
+  },
+  {
+    "twitchName": "Alfie",
+    "characterNames": [
+      "Alfate"
+    ]
+  },
+  {
+    "twitchName": "WatchGamesTV",
+    "characterNames": [
+      "MemesTV"
+    ]
+  },
+  {
+    "twitchName": "Rigondeaux",
+    "characterNames": [
+      "Rentrex"
+    ]
+  },
+  {
+    "twitchName": "LucidDream",
+    "characterNames": [
+      "Dream Realm"
+    ]
+  },
+  {
+    "twitchName": "Alkan",
+    "characterNames": [
+      "Number1 Bass"
+    ]
+  },
+  {
+    "twitchName": "Ea_Enkii",
+    "characterNames": [
+      "Ea_Enkii"
+    ]
+  },
+  {
+    "twitchName": "Puggin",
+    "characterNames": [
+      "pug n"
+    ]
+  },
+  {
+    "twitchName": "poisonedpotion",
+    "characterNames": [
+      "HardcorePP2"
+    ]
+  },
+  {
+    "twitchName": "itsPrezzyG",
+    "characterNames": [
+      "itsPrezzyG"
+    ]
+  },
+  {
+    "twitchName": "RiceCup",
+    "characterNames": [
+      "Mr Iron Bar"
+    ]
+  },
+  {
+    "twitchName": "The_Olive",
+    "characterNames": [
+      "Iron Olive"
+    ]
+  },
+  {
+    "twitchName": "AColdOne",
+    "characterNames": [
+      "Car Pen Tree"
+    ]
+  },
+  {
+    "twitchName": "Onahop",
+    "characterNames": [
+      "Ahop"
+    ]
+  },
+  {
+    "twitchName": "Lil_cards",
+    "characterNames": [
+      "Mercedes xox"
+    ]
+  },
+  {
+    "twitchName": "dirtmess",
+    "characterNames": [
+      "Dirt Mess"
+    ]
+  },
+  {
+    "twitchName": "MarquezOSRS",
+    "characterNames": [
+      "MarquezIRON"
+    ]
+  },
+  {
+    "twitchName": "Armondega",
+    "characterNames": [
+      "Armondega"
+    ]
+  },
+  {
+    "twitchName": "lilderra",
+    "characterNames": [
+      "Derra"
+    ]
+  },
+  {
+    "twitchName": "TheEdB0ys",
+    "characterNames": [
+      "85dakota85"
+    ]
+  },
+  {
+    "twitchName": "Fat_Clouds",
+    "characterNames": [
+      "Fat Clouds"
+    ]
+  },
+  {
+    "twitchName": "blowpipe_osrs",
+    "characterNames": [
+      "PEACH MANG0"
+    ]
+  },
+  {
+    "twitchName": "HeyJanae",
+    "characterNames": [
+      "smallnoobies"
+    ]
+  },
+  {
+    "twitchName": "Ron_Plays_Games",
+    "characterNames": [
+      "I Ron Man"
+    ]
+  },
+  {
+    "twitchName": "Doge",
+    "characterNames": [
+      "a2b"
+    ]
+  },
+  {
+    "twitchName": "Beer_Pongll",
+    "characterNames": [
+      "Pongsy"
+    ]
+  },
+  {
+    "twitchName": "PinkPorsches",
+    "characterNames": [
+      "PinkPorsches"
+    ]
+  },
+  {
+    "twitchName": "Avatar_roku95",
+    "characterNames": [
+      "xNobumagaOda"
+    ]
+  },
+  {
+    "twitchName": "Jagars",
+    "characterNames": [
+      "Solus Jags",
+      "Eirinistis"
+    ]
+  },
+  {
+    "twitchName": "stonezRS",
+    "characterNames": [
+      "not stonez"
+    ]
+  },
+  {
+    "twitchName": "superdupermaxx",
+    "characterNames": [
+      "supermaxx"
+    ]
+  },
+  {
+    "twitchName": "GoddessGlory",
+    "characterNames": [
+      "GoddessGlory"
+    ]
+  },
+  {
+    "twitchName": "Vancouver07",
+    "characterNames": [
+      "Vanshitter"
+    ]
+  },
+  {
+    "twitchName": "Its_Corby",
+    "characterNames": [
+      "Distributing"
+    ]
+  },
+  {
+    "twitchName": "lauren",
+    "characterNames": [
+      "L aw Rune"
+    ]
+  },
+  {
+    "twitchName": "ParkingMeterRS",
+    "characterNames": [
+      "New Meter"
+    ]
+  },
+  {
+    "twitchName": "igamblesometimes",
+    "characterNames": [
+      "igamblesome"
+    ]
+  },
+  {
+    "twitchName": "FudgeShover",
+    "characterNames": [
+      "Strip Cowboy"
+    ]
+  },
+  {
+    "twitchName": "25x_",
+    "characterNames": [
+      "DV8"
+    ]
+  },
+  {
+    "twitchName": "Allakazzaror",
+    "characterNames": [
+      "Alakazzaror"
+    ]
+  },
+  {
+    "twitchName": "Caitrs",
+    "characterNames": [
+      "Caitrs"
+    ]
+  },
+  {
+    "twitchName": "CupofPurp",
+    "characterNames": [
+      "Arena Don"
+    ]
+  },
+  {
+    "twitchName": "seulpuh",
+    "characterNames": [
+      "absol01"
+    ]
+  },
+  {
+    "twitchName": "Strabawi",
+    "characterNames": [
+      "Strabawi"
+    ]
+  },
+  {
+    "twitchName": "FeelsIncredibleMan",
+    "characterNames": [
+      "Fake C"
+    ]
+  },
+  {
+    "twitchName": "Zumi",
+    "characterNames": [
+      "Ryizumi"
+    ]
+  },
+  {
+    "twitchName": "barrows_bob",
+    "characterNames": [
+      "Barrows Bob"
+    ]
+  },
+  {
+    "twitchName": "marsabun",
+    "characterNames": [
+      "marsabun"
+    ]
+  },
+  {
+    "twitchName": "AwakenedAce",
+    "characterNames": [
+      "AwakenedAce"
+    ]
+  },
+  {
+    "twitchName": "Spilffa",
+    "characterNames": [
+      "UIM Spliffa"
+    ]
+  },
+  {
+    "twitchName": "Leeloochu",
+    "characterNames": [
+      "xLayLay"
+    ]
+  },
+  {
+    "twitchName": "jimbobcheese1",
+    "characterNames": [
+      "jimbobcheese"
+    ]
+  },
+  {
+    "twitchName": "DelVision",
+    "characterNames": [
+      "Ultimate_Del"
+    ]
+  },
+  {
+    "twitchName": "anna_bananatv",
+    "characterNames": [
+      "Annabananatv"
+    ]
+  },
+  {
+    "twitchName": "TipsyLegend",
+    "characterNames": [
+      "TipsyZerk"
+    ]
+  },
+  {
+    "twitchName": "sekhon",
+    "characterNames": [
+      "sekky wekky",
+      "pikimusta"
+    ]
+  },
+  {
+    "twitchName": "Voldesad",
+    "characterNames": [
+      "Voldesad"
+    ]
+  },
+  {
+    "twitchName": "TomBtw",
+    "characterNames": [
+      "DedVittu",
+      "Tom btw"
+    ]
+  }
 ]
