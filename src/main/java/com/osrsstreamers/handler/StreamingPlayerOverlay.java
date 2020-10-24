@@ -16,7 +16,7 @@ public class StreamingPlayerOverlay extends Overlay {
 
     public StreamerHandler streamerHandler;
 
-    private static final Color TWITCH_COLOR = new Color(95, 58, 162);
+    private static final Color TWITCH_COLOR = new Color(133, 76, 231);
     private static final Color OFFLINE_COLOR = new Color(169, 169, 169);
     private static final int PLAYER_OVERHEAD_TEXT_MARGIN =  40;
 
@@ -32,7 +32,7 @@ public class StreamingPlayerOverlay extends Overlay {
     @Override
     public Dimension render(Graphics2D graphics) {
 
-        client.getPlayers().forEach(player -> {
+        client.getPlayers().stream().filter(player -> !player.equals(client.getLocalPlayer())).forEach(player -> {
             NearbyPlayer nearbyPlayer = streamerHandler.getNearbyPlayer(player.getName());
             if (Objects.nonNull(nearbyPlayer) && !StreamStatus.NOT_STREAMER.equals(nearbyPlayer.status)) {
                 Color color = OFFLINE_COLOR;
