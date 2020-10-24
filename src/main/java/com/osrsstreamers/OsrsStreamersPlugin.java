@@ -3,9 +3,11 @@ package com.osrsstreamers;
 import com.google.inject.Provides;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.swing.*;
 
 import com.osrsstreamers.handler.StreamerHandler;
 import com.osrsstreamers.handler.StreamingPlayerOverlay;
+import com.osrsstreamers.ui.OsrsStreamersPluginPanel;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.api.events.CommandExecuted;
@@ -16,8 +18,12 @@ import net.runelite.client.events.ConfigChanged;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.task.Schedule;
+import net.runelite.client.ui.ClientToolbar;
+import net.runelite.client.ui.NavigationButton;
 import net.runelite.client.ui.overlay.OverlayManager;
+import net.runelite.client.util.ImageUtil;
 
+import java.awt.image.BufferedImage;
 import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
@@ -46,12 +52,27 @@ public class OsrsStreamersPlugin extends Plugin
 	@Named("developerMode")
 	boolean developerMode;
 
-	private StreamerHandler streamerHandler;
+	@Inject
+	private ClientToolbar clientToolbar;
+
+	public StreamerHandler streamerHandler;
 
 	@Override
 	protected void startUp()
 	{
 		startHandlingTwitchStreams();
+			OsrsStreamersPluginPanel panel = new OsrsStreamersPluginPanel(this);
+			final BufferedImage icon = ImageUtil.getResourceStreamFromClass(getClass(), "/icon.png");
+
+			NavigationButton navButton = NavigationButton.builder()
+					.tooltip("OSRS Streamers")
+					.icon(icon)
+					.priority(7)
+					.panel(panel)
+					.build();
+
+			clientToolbar.addNavigation(navButton);
+
 	}
 
 	@Override

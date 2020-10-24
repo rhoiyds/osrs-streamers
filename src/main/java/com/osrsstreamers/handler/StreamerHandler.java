@@ -51,7 +51,7 @@ public class StreamerHandler {
 
     private Gson gson = new Gson();
 
-    private VerifiedStreamers verifiedStreamers;
+    public VerifiedStreamers verifiedStreamers;
 
     public StreamerHandler(Client client, OsrsStreamersConfig config) {
         this.client = client;
