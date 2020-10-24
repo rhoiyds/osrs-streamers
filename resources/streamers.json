@@ -412,5 +412,43 @@
     "characterNames": [
       "Yamagata"
     ]
+  },
+  {
+    "twitchName": "Shul",
+    "characterNames": [
+      "Shuldru",
+      "Shuladin"
+    ]
+  },
+  {
+    "twitchName": "Donovans",
+    "characterNames": [
+      "DonovanRS"
+    ]
+  },
+  {
+    "twitchName": "LooneyPLX",
+    "characterNames": [
+      "JoshLooney"
+    ]
+  },
+  {
+    "twitchName": "ImaDrum",
+    "characterNames": [
+      "Drum"
+    ]
+  },
+  {
+    "twitchName": "RealEvanem",
+    "characterNames": [
+      "RealEvanem",
+      "HcEvanem"
+    ]
+  },
+  {
+    "twitchName": "HalahanOSRS",
+    "characterNames": [
+      "Halahan"
+    ]
   }
 ]
