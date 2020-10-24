@@ -16,30 +16,29 @@ import java.awt.event.MouseEvent;
 public class VerifiedStreamerPanel {
 
     private static final ImageIcon ARROW_RIGHT_ICON;
-    private static final ImageIcon GITHUB_ICON;
 
     static
     {
         ARROW_RIGHT_ICON = new ImageIcon(ImageUtil.getResourceStreamFromClass(InfoPanel.class, "/util/arrow_right.png"));
-        GITHUB_ICON = new ImageIcon(ImageUtil.getResourceStreamFromClass(InfoPanel.class, "github_icon.png"));
     }
 
     public static JPanel buildVerifiedStreamerPanel(ImageIcon icon, String topText, String bottomText, String url) {
         JPanel container = new JPanel();
         container.setBackground(ColorScheme.DARKER_GRAY_COLOR);
         container.setLayout(new BorderLayout());
-        container.setBorder(new EmptyBorder(10, 10, 10, 10));
+        container.setBorder(new EmptyBorder(5, 5, 5, 5));
 
         final Color hoverColor = ColorScheme.DARKER_GRAY_HOVER_COLOR;
         final Color pressedColor = ColorScheme.DARKER_GRAY_COLOR.brighter();
 
-        JLabel iconLabel = new JLabel(icon);
-        container.add(iconLabel, BorderLayout.WEST);
+        //Will add icons online/offline status soon
+        //JLabel iconLabel = new JLabel(icon);
+        //container.add(iconLabel, BorderLayout.WEST);
 
         JPanel textContainer = new JPanel();
         textContainer.setBackground(ColorScheme.DARKER_GRAY_COLOR);
         textContainer.setLayout(new GridLayout(2, 1));
-        textContainer.setBorder(new EmptyBorder(5, 10, 5, 10));
+        textContainer.setBorder(new EmptyBorder(2, 5, 2, 5));
 
         container.addMouseListener(new MouseAdapter()
         {

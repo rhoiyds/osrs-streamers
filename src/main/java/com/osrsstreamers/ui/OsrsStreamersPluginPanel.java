@@ -2,12 +2,15 @@ package com.osrsstreamers.ui;
 
 import com.osrsstreamers.OsrsStreamersPlugin;
 import com.osrsstreamers.handler.Streamer;
-import net.runelite.client.plugins.info.InfoPanel;
 import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.ui.components.IconTextField;
 import net.runelite.client.ui.components.PluginErrorPanel;
 import net.runelite.client.util.ImageUtil;
+import net.runelite.client.util.LinkBrowser;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.List;
 
 import javax.swing.*;
@@ -28,16 +31,15 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
 
     private JPanel streamersContainer;
 
-    private static final ImageIcon GITHUB_ICON;
+    private final ImageIcon TWITCH_ICON = new ImageIcon(ImageUtil.getResourceStreamFromClass(getClass(), "/icon.png"));
+
+    private static final String STREAMER_VALIDATION_URL = "https://github.com/rhoiyds/osrs-streamers";
+
+    private static final String TWITCH_DOMAIN = "https://twitch.tv/";
 
     public OsrsStreamersPluginPanel(OsrsStreamersPlugin osrsStreamersPlugin) {
         this.plugin = osrsStreamersPlugin;
         init();
-    }
-
-    static
-    {
-        GITHUB_ICON = new ImageIcon(ImageUtil.getResourceStreamFromClass(InfoPanel.class, "github_icon.png"));
     }
 
     void init()
@@ -111,7 +113,7 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
         }).collect(Collectors.toList());
 
         filteredStreamers.forEach(streamer -> streamersContainer.add(
-                VerifiedStreamerPanel.buildVerifiedStreamerPanel(GITHUB_ICON, streamer.twitchName, String.join(", ", streamer.characterNames), "https://twitch.tv/" + streamer.twitchName)));
+                VerifiedStreamerPanel.buildVerifiedStreamerPanel(TWITCH_ICON, streamer.twitchName, String.join(", ", streamer.characterNames), TWITCH_DOMAIN + streamer.twitchName)));
 
         if (filteredStreamers.isEmpty()) {
             JPanel errorWrapper = new JPanel(new BorderLayout());
@@ -120,8 +122,22 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
             errorWrapper.add(errorPanel, BorderLayout.NORTH);
 
             errorPanel.setBorder(new EmptyBorder(50, 20, 20, 20));
-            errorPanel.setContent("No streamer found", "Streamers must be verified first.");
+            errorPanel.setContent("No streamer found", "If you're a streamer and not verified, you can quickly submit for verification below - if you're not the streamer, tell them to come verify!");
             streamersContainer.add(errorWrapper, errorPanel);
+            JButton externalPluginButton = new JButton("Validate streamer");
+            externalPluginButton.setBorder(new EmptyBorder(5, 5, 5, 5));
+            externalPluginButton.setLayout(new BorderLayout(0, BORDER_OFFSET));
+            externalPluginButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            externalPluginButton.addMouseListener(new MouseAdapter()
+            {
+                @Override
+                public void mouseReleased(MouseEvent e)
+                {
+                    LinkBrowser.browse(STREAMER_VALIDATION_URL);
+                }
+
+            });
+            streamersContainer.add(externalPluginButton);
         }
 
         repaint();
