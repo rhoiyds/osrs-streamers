@@ -481,5 +481,33 @@
     "characterNames": [
       "USA USA USA"
     ]
+  },
+  {
+    "twitchName": "DionInsanity",
+    "characterNames": [
+      "DionInsanity",
+      "HCInsanity"
+    ]
+  },
+  {
+    "twitchName": "jimsons",
+    "characterNames": [
+      "0mg a duck",
+      "hotdog bun"
+    ]
+  },
+  {
+    "twitchName": "KelkaGames",
+    "characterNames": [
+      "Guth Heals",
+      "ZelfOnShelf"
+    ]
+  },
+  {
+    "twitchName": "BainesGames",
+    "characterNames": [
+      "BainesGames",
+      "DiedToElf"
+    ]
   }
 ]

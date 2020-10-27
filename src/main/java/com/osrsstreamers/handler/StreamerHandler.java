@@ -87,7 +87,7 @@ public class StreamerHandler {
         MenuEntry[] menuEntries = client.getMenuEntries();
         if (PLAYER_INDICATOR.equals(event.getOption())) {
             NearbyPlayer nearbyPlayer = this.nearbyPlayers.get(Text.removeTags(event.getTarget()).split("[(]")[0].trim());
-            if (Objects.nonNull(nearbyPlayer) && StreamStatus.LIVE.equals(nearbyPlayer.getStatus())) {
+            if (Objects.nonNull(nearbyPlayer) && !StreamStatus.NOT_STREAMER.equals(nearbyPlayer.getStatus())) {
                 menuEntries = Arrays.copyOf(menuEntries, menuEntries.length + 1);
                 MenuEntry menuEntry = menuEntries[menuEntries.length - 1] = new MenuEntry();
                 menuEntry.setOption(WATCH_STREAM_ACTION);
