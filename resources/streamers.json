@@ -499,8 +499,7 @@
   {
     "twitchName": "KelkaGames",
     "characterNames": [
-      "Guth Heals",
-      "ZelfOnShelf"
+      "Standing RNG"
     ]
   },
   {
@@ -3959,7 +3958,8 @@
   {
     "twitchName": "B0aty",
     "characterNames": [
-      "sacred trial"
+      "sacred trial",
+      "B0aty"
     ]
   },
   {
@@ -8400,6 +8400,36 @@
     "twitchName": "dogsinoraa",
     "characterNames": [
       "Hitch Dreyse"
+    ]
+  },
+  {
+    "twitchName": "Kyleslive",
+    "characterNames": [
+      "Spach"
+    ]
+  },
+  {
+    "twitchName": "Baino",
+    "characterNames": [
+      "Baino"
+    ]
+  },
+  {
+    "twitchName": "JinOSRS",
+    "characterNames": [
+      "animus999"
+    ]
+  },
+  {
+    "twitchName": "SpartanTheDogg",
+    "characterNames": [
+      "Sparty"
+    ]
+  },
+  {
+    "twitchName": "YeetGriet",
+    "characterNames": [
+      "ZulrahYeet"
     ]
   }
 ]
