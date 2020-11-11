@@ -25,15 +25,15 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
 
     OsrsStreamersPlugin plugin;
 
-    private final JLabel title = new JLabel();
-
     private IconTextField searchBar;
 
     private JPanel streamersContainer;
 
     private final ImageIcon TWITCH_ICON = new ImageIcon(ImageUtil.getResourceStreamFromClass(getClass(), "/icon.png"));
 
-    private static final String STREAMER_VALIDATION_URL = "https://github.com/rhoiyds/osrs-streamers";
+    private final ImageIcon ADD_ICON = new ImageIcon(ImageUtil.getResourceStreamFromClass(getClass(), "/add_icon.png"));
+
+    private static final String STREAMER_VALIDATION_URL = "https://github.com/rhoiyds/osrs-streamers#becoming-a-verified-streamer";
 
     private static final String TWITCH_DOMAIN = "https://twitch.tv/";
 
@@ -51,6 +51,7 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
         streamersContainer = new JPanel();
         streamersContainer.setBorder(new EmptyBorder(10, 0, 0, 0));
         streamersContainer.setLayout(new GridLayout(0, 1, 0, 10));
+        JLabel title = new JLabel();
         title.setText("OSRS Streamers");
         title.setForeground(Color.WHITE);
 
@@ -86,16 +87,39 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
         });
         searchBar.addClearListener(this::updateStreamersList);
 
-        // the panel that stays at the top and doesn't scroll
-        // contains the title and buttons
-        final JPanel northAnchoredPanel = new JPanel();
-        northAnchoredPanel.setLayout(new BoxLayout(northAnchoredPanel, BoxLayout.Y_AXIS));
-        northAnchoredPanel.setBorder(new EmptyBorder(0, 0, 10, 0));
-        northAnchoredPanel.add(title);
-        northAnchoredPanel.add(Box.createRigidArea(new Dimension(0, 5)));
-        northAnchoredPanel.add(searchBar);
+        JLabel addHereLabel = new JLabel();
+        addHereLabel.setText("Add streamer to list");
 
-        add(northAnchoredPanel, BorderLayout.NORTH);
+        JLabel addHereButton = new JLabel(ADD_ICON);
+        addHereButton.setToolTipText("Add yourself or your favorite streamer");
+        addHereButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        addHereButton.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseReleased(MouseEvent e)
+            {
+                LinkBrowser.browse(STREAMER_VALIDATION_URL);
+            }
+
+        });
+
+        JPanel addPanel = new JPanel(new BorderLayout());
+        addPanel.setBorder(new EmptyBorder(1, 0, 10, 0));
+        addPanel.add(addHereLabel, BorderLayout.WEST);
+        addPanel.add(addHereButton, BorderLayout.EAST);
+
+        final JPanel northPanel = new JPanel(new GridBagLayout());
+        northPanel.add(title, constraints);
+        constraints.gridy++;
+        northPanel.add(Box.createRigidArea(new Dimension(0, 10)), constraints);
+        constraints.gridy++;
+        northPanel.add(searchBar, constraints);
+        constraints.gridy++;
+        northPanel.add(Box.createRigidArea(new Dimension(0, 10)), constraints);
+        constraints.gridy++;
+        northPanel.add(addPanel, constraints);
+
+        add(northPanel, BorderLayout.NORTH);
         add(streamersContainer, BorderLayout.CENTER);
         this.updateStreamersList();
 
@@ -122,22 +146,8 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
             errorWrapper.add(errorPanel, BorderLayout.NORTH);
 
             errorPanel.setBorder(new EmptyBorder(50, 20, 20, 20));
-            errorPanel.setContent("No streamer found", "If you're a streamer and not verified, you can quickly submit for verification below - if you're not the streamer, tell them to come verify!");
+            errorPanel.setContent("No streamer found", "Add yourself or your favorite streamer using the plus button above.");
             streamersContainer.add(errorWrapper, errorPanel);
-            JButton externalPluginButton = new JButton("Validate streamer");
-            externalPluginButton.setBorder(new EmptyBorder(5, 5, 5, 5));
-            externalPluginButton.setLayout(new BorderLayout(0, BORDER_OFFSET));
-            externalPluginButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-            externalPluginButton.addMouseListener(new MouseAdapter()
-            {
-                @Override
-                public void mouseReleased(MouseEvent e)
-                {
-                    LinkBrowser.browse(STREAMER_VALIDATION_URL);
-                }
-
-            });
-            streamersContainer.add(externalPluginButton);
         }
 
         repaint();
