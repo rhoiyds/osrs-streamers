@@ -1,12 +1,16 @@
 package com.osrsstreamers.handler;
 
+import com.osrsstreamers.OsrsStreamersConfig;
 import net.runelite.api.Client;
 import net.runelite.api.Point;
 import net.runelite.client.ui.overlay.*;
 import net.runelite.client.util.Text;
 
 import javax.inject.Inject;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Dimension;
+import java.awt.Polygon;
 import java.util.Objects;
 
 public class StreamingPlayerOverlay extends Overlay {
@@ -16,13 +20,16 @@ public class StreamingPlayerOverlay extends Overlay {
 
     public StreamerHandler streamerHandler;
 
+    private final OsrsStreamersConfig config;
+
     private static final Color TWITCH_COLOR = new Color(133, 76, 231);
     private static final Color OFFLINE_COLOR = new Color(169, 169, 169);
     private static final int PLAYER_OVERHEAD_TEXT_MARGIN =  40;
 
     @Inject
-    private StreamingPlayerOverlay()
+    private StreamingPlayerOverlay(OsrsStreamersConfig config)
     {
+        this.config = config;
         setLayer(OverlayLayer.ABOVE_SCENE);
         setPosition(OverlayPosition.DYNAMIC);
         setPriority(OverlayPriority.MED);
@@ -38,6 +45,9 @@ public class StreamingPlayerOverlay extends Overlay {
                 Color color = OFFLINE_COLOR;
                 if (StreamStatus.LIVE.equals(nearbyPlayer.getStatus())) {
                     color = TWITCH_COLOR;
+                }
+                if (config.onlyShowStreamersWhoAreLive() && (nearbyPlayer.status.equals(StreamStatus.NOT_LIVE) || nearbyPlayer.status.equals(StreamStatus.STREAMER))) {
+                    return;
                 }
                 final Polygon poly = player.getCanvasTilePoly();
                 if (poly != null)

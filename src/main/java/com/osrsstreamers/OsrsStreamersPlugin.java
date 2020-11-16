@@ -3,9 +3,9 @@ package com.osrsstreamers;
 import com.google.inject.Provides;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.swing.*;
 
 import com.osrsstreamers.handler.StreamerHandler;
+import com.osrsstreamers.handler.StreamingPlayerMinimapOverlay;
 import com.osrsstreamers.handler.StreamingPlayerOverlay;
 import com.osrsstreamers.ui.OsrsStreamersPluginPanel;
 import lombok.extern.slf4j.Slf4j;
@@ -49,6 +49,9 @@ public class OsrsStreamersPlugin extends Plugin
 	private StreamingPlayerOverlay streamingPlayerOverlay;
 
 	@Inject
+	private StreamingPlayerMinimapOverlay streamingPlayerMinimapOverlay;
+
+	@Inject
 	@Named("developerMode")
 	boolean developerMode;
 
@@ -86,7 +89,9 @@ public class OsrsStreamersPlugin extends Plugin
 			eventBus.unregister(streamerHandler);
 			streamerHandler = null;
 			this.streamingPlayerOverlay.streamerHandler = null;
+			this.streamingPlayerMinimapOverlay.streamerHandler = null;
 			overlayManager.remove(streamingPlayerOverlay);
+			overlayManager.remove(streamingPlayerMinimapOverlay);
 		}
 	}
 
@@ -95,7 +100,9 @@ public class OsrsStreamersPlugin extends Plugin
 			streamerHandler = new StreamerHandler(client, config);
 			eventBus.register(streamerHandler);
 			this.streamingPlayerOverlay.streamerHandler = streamerHandler;
+			this.streamingPlayerMinimapOverlay.streamerHandler = streamerHandler;
 			overlayManager.add(streamingPlayerOverlay);
+			overlayManager.add(streamingPlayerMinimapOverlay);
 		}
 	}
 
@@ -122,7 +129,7 @@ public class OsrsStreamersPlugin extends Plugin
 	public void checkNearbyPlayers() {
 		if (Objects.nonNull(this.streamerHandler)) {
 			this.streamerHandler.removeOldNearbyPlayers();
-			if (config.checkIfLive() && Objects.nonNull(config.userAccessToken())) {
+			if (Objects.nonNull(config.userAccessToken())) {
 				this.streamerHandler.fetchStreamStatusOfUndeterminedStreamers();
 			}
 		}
