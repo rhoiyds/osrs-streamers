@@ -9285,7 +9285,9 @@
   {
     "twitchName": "Hobbes_SSBM",
     "characterNames": [
-      "Smol Kisses"
+      "Smol Kisses",
+      "Hobbes_SSBM"
+
     ]
   },
   {
@@ -11991,6 +11993,18 @@
     "twitchName": "SmaxemTv",
     "characterNames": [
       "Smaxem TV"
+    ]
+  },
+  {
+    "twitchName": "ChipsandgravyOCE",
+    "characterNames": [
+      "ChipsInGravy"
+    ]
+  },
+  {
+    "twitchName": "Qikar_rs",
+    "characterNames": [
+      "TB Qikar"
     ]
   }
 ]
