@@ -458,19 +458,19 @@
     "characterNames": [
       "Halahan"
     ]
-  } ,
+  },
   {
     "twitchName": "Troy_Wilko",
     "characterNames": [
       "TroysCoronas"
     ]
-  } ,
+  },
   {
     "twitchName": "Canadian_RS",
     "characterNames": [
       "Aboot Canada"
     ]
-  } ,
+  },
   {
     "twitchName": "Pache",
     "characterNames": [
@@ -528,13 +528,13 @@
     "characterNames": [
       "Beiop"
     ]
-  } ,
+  },
   {
     "twitchName": "JMiddd",
     "characterNames": [
       "JMidddKek"
     ]
-  } ,
+  },
   {
     "twitchName": "H4MPSHIRE",
     "characterNames": [
@@ -580,7 +580,8 @@
   {
     "twitchName": "UIM_Verf",
     "characterNames": [
-      "UIM Verf"
+      "UIM Verf",
+      "Also Verf"
     ]
   },
   {
@@ -688,8 +689,8 @@
   {
     "twitchName": "WooxSolo",
     "characterNames": [
-    "CanNotLogIn"
-  ]
+      "CanNotLogIn"
+    ]
   },
   {
     "twitchName": "Synq",
@@ -1858,6 +1859,7 @@
   {
     "twitchName": "XZYZ0R",
     "characterNames": [
+      "XZYZ0R",
       "XZYZ0R"
     ]
   },
@@ -4903,7 +4905,7 @@
       "Steevesp1ays"
     ]
   },
-    {
+  {
     "twitchName": "notanaltact",
     "characterNames": [
       "NotanAltAct"
@@ -5390,7 +5392,8 @@
   {
     "twitchName": "AOAATube",
     "characterNames": [
-      "On Site Tom"
+      "On Site Tom",
+      "Wet Bum Tom"
     ]
   },
   {
@@ -12251,6 +12254,108 @@
     "twitchName": "badintentios",
     "characterNames": [
       "spirity"
+    ]
+  },
+  {
+    "twitchName": "Corkie",
+    "characterNames": [
+      "Corkie"
+    ]
+  },
+  {
+    "twitchName": "BobbyyHillOSRS",
+    "characterNames": [
+      "BobbyyHill"
+    ]
+  },
+  {
+    "twitchName": "JespeD",
+    "characterNames": [
+      "Jespedw"
+    ]
+  },
+  {
+    "twitchName": "Arrowesome",
+    "characterNames": [
+      "Arrowesome"
+    ]
+  },
+  {
+    "twitchName": "p0shyy",
+    "characterNames": [
+      "HCOnlyStream"
+    ]
+  },
+  {
+    "twitchName": "Prollmann",
+    "characterNames": [
+      "Good Worth"
+    ]
+  },
+  {
+    "twitchName": "xElysii",
+    "characterNames": [
+      "L arse"
+    ]
+  },
+  {
+    "twitchName": "oshorne",
+    "characterNames": [
+      "OSHORNEZ"
+    ]
+  },
+  {
+    "twitchName": "LELAND",
+    "characterNames": [
+      "Leland tbh"
+    ]
+  },
+  {
+    "twitchName": "BraderOSRS",
+    "characterNames": [
+      "Brader"
+    ]
+  },
+  {
+    "twitchName": "MalasonKaayo",
+    "characterNames": [
+      "Whip Noobs"
+    ]
+  },
+  {
+    "twitchName": "bag_of_wtf",
+    "characterNames": [
+      "orange drink"
+    ]
+  },
+  {
+    "twitchName": "NoellaCh",
+    "characterNames": [
+      "NoellaCh"
+    ]
+  },
+  {
+    "twitchName": "WreckageOSRS",
+    "characterNames": [
+      "Wreckage"
+    ]
+  },
+  {
+    "twitchName": "hawkeye_dp",
+    "characterNames": [
+      "hawkeye dp"
+    ]
+  },
+  {
+    "twitchName": "ogpulsetv",
+    "characterNames": [
+      "ItsPulse"
+    ]
+  },
+  {
+    "twitchName": "lolhousehost",
+    "characterNames": [
+      "Faves"
     ]
   }
 ]
