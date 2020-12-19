@@ -854,8 +854,106 @@
   {
     "twitchName": "BladeBTW",
     "characterNames": [
+      "Mystic Blade",
+      "Xeric Blade",
+      "Epic Blade",
       "Magic Blade",
-      "Heroic Blade"
+      "Garlic Blade",
+      "Rip75k Blade",
+      "uWu Blade",
+      "Lyric Blade",
+      "Agonic Blade",
+      "Antic Blade",
+      "Arabic Blade",
+      "Auric Blade",
+      "Axenic Blade",
+      "Azoic Blade",
+      "Azonic Blade",
+      "Azotic Blade",
+      "Bardic Blade",
+      "Baric Blade",
+      "Biotic Blade",
+      "Boric Blade",
+      "Bromic Blade",
+      "Cadmic Blade",
+      "Calcic Blade",
+      "Ceric Blade",
+      "Chemic Blade",
+      "Citric Blade",
+      "Civic Blade",
+      "Cleric Blade",
+      "Conic Blade",
+      "Critic Blade",
+      "Cultic Blade",
+      "Cupric Blade",
+      "Cyanic Blade",
+      "Daric Blade",
+      "Dyadic Blade",
+      "Echoic Blade",
+      "Emetic Blade",
+      "Emic Blade",
+      "Erotic Blade",
+      "Ethic Blade",
+      "Ethnic Blade",
+      "Etic Blade",
+      "Fabric Blade",
+      "Felsic Blade",
+      "Frolic Blade",
+      "Fustic Blade",
+      "Gnomic Blade",
+      "Hemic Blade",
+      "Holmic Blade",
+      "Humic Blade",
+      "Hydric Blade",
+      "Iodic Blade",
+      "Ionic Blade",
+      "Iridic Blade",
+      "Laic Blade",
+      "Limbic Blade",
+      "Lithic Blade",
+      "Logic Blade",
+      "Ludic Blade",
+      "Mafic Blade",
+      "Mantic Blade",
+      "Mastic Blade",
+      "Medic Blade",
+      "Melic Blade",
+      "Mesic Blade",
+      "Mimic Blade",
+      "Music Blade",
+      "Niobic Blade",
+      "Nitric Blade",
+      "Odic Blade",
+      "Ontic Blade",
+      "Osmic Blade",
+      "Ovonic Blade",
+      "Oxalic Blade",
+      "Oxidic Blade",
+      "Ozonic Blade",
+      "Panic Blade",
+      "Pelvic Blade",
+      "Photic Blade",
+      "Picnic Blade",
+      "Poetic Blade",
+      "Pyric Blade",
+      "Rhodic Blade",
+      "Salic Blade",
+      "Sepic Blade",
+      "Sodic Blade",
+      "Steric Blade",
+      "Syndic Blade",
+      "Telic Blade",
+      "Terbic Blade",
+      "Thic Blade",
+      "Thoric Blade",
+      "Toluic Blade",
+      "Toric Blade",
+      "Typic Blade",
+      "Uranic Blade",
+      "Vitric Blade",
+      "Yttric Blade",
+      "Zincic Blade",
+      "Zoic Blade"
     ]
   },
   {
@@ -4729,7 +4827,7 @@
   {
     "twitchName": "RageC0ld",
     "characterNames": [
-      "RageC0ld"
+      "RageLoff"
     ]
   },
   {
@@ -12700,6 +12798,18 @@
     "twitchName": "RickSilvz",
     "characterNames": [
       "RickSilvz"
+    ]
+  },
+  {
+    "twitchName": "XZYZ0R",
+    "characterNames": [
+      "XZYZ0R"
+    ]
+  },
+  {
+    "twitchName": "gibaaaao",
+    "characterNames": [
+      "Giba vs Liga"
     ]
   }
 ]
