@@ -1,5 +1,11 @@
 [
   {
+    "twitchName": "behe_meth",
+    "characterNames": [
+      "Behemeths"
+    ]
+  },
+  {
     "twitchName": "Mmorpg",
     "characterNames": [
       "Mmorpg"
@@ -865,7 +871,7 @@
       "Garlic Blade",
       "Rip75k Blade",
       "uWu Blade",
-      "Lyric Blade",
+      "Gg150k Blade",
       "Agonic Blade",
       "Antic Blade",
       "Arabic Blade",
@@ -12995,12 +13001,6 @@
     ]
   },
   {
-    "twitchName": "justa2oh",
-    "characterNames": [
-      "jayden112244"
-    ]
-  },
-  {
     "twitchName": "sethenk",
     "characterNames": [
       "Set Henk"
@@ -13010,6 +13010,42 @@
     "twitchName": "Herolopez",
     "characterNames": [
       "skillz4fr33"
+    ]
+  },
+  {
+    "twitchName": "lingardb",
+    "characterNames": [
+      "Lingard"
+    ]
+  },
+  {
+    "twitchName": "Sweett_T",
+    "characterNames": [
+      "Sweeeet T"
+    ]
+  },
+  {
+    "twitchName": "LarnTheLizard",
+    "characterNames": [
+      "LarnTheLizrd"
+    ]
+  },
+  {
+    "twitchName": "CillitWang",
+    "characterNames": [
+      "WreckITRolfe"
+    ]
+  },
+  {
+    "twitchName": "BigRedJapan",
+    "characterNames": [
+      "BigRedJapan"
+    ]
+  },
+  {
+    "twitchName": "fnsldk",
+    "characterNames": [
+      "Lunia"
     ]
   }
 ]
