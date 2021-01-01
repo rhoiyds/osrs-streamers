@@ -53,6 +53,10 @@ public class StreamerHandler {
 
     public VerifiedStreamers verifiedStreamers;
 
+    public boolean validToken = false;
+
+    public int daysUntilTokenExpiration;
+
     public StreamerHandler(Client client, OsrsStreamersConfig config) {
         this.client = client;
         this.config = config;
