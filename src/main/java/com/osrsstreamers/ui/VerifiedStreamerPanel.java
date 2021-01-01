@@ -12,6 +12,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Objects;
 
 public class VerifiedStreamerPanel {
 
@@ -31,9 +32,10 @@ public class VerifiedStreamerPanel {
         final Color hoverColor = ColorScheme.DARKER_GRAY_HOVER_COLOR;
         final Color pressedColor = ColorScheme.DARKER_GRAY_COLOR.brighter();
 
-        //Will add icons online/offline status soon
-        //JLabel iconLabel = new JLabel(icon);
-        //container.add(iconLabel, BorderLayout.WEST);
+        if (Objects.nonNull(icon)) {
+            JLabel iconLabel = new JLabel(icon);
+            container.add(iconLabel, BorderLayout.WEST);
+        }
 
         JPanel textContainer = new JPanel();
         textContainer.setBackground(ColorScheme.DARKER_GRAY_COLOR);

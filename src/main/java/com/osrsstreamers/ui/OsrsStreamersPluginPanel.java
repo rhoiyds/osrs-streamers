@@ -3,6 +3,7 @@ package com.osrsstreamers.ui;
 import com.osrsstreamers.OsrsStreamersPlugin;
 import com.osrsstreamers.handler.Streamer;
 import net.runelite.client.ui.ColorScheme;
+import net.runelite.client.ui.FontManager;
 import net.runelite.client.ui.PluginPanel;
 import net.runelite.client.ui.components.IconTextField;
 import net.runelite.client.ui.components.PluginErrorPanel;
@@ -37,12 +38,18 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
 
     private static final String TWITCH_DOMAIN = "https://twitch.tv/";
 
+    private static final String TOKEN_GENERATOR_DOMAIN = "https://rhoiyds.github.io/osrs-streamers/";
+
+    private final ImageIcon WARNING_ICON = new ImageIcon(ImageUtil.getResourceStreamFromClass(getClass(), "/warning-icon.png"));
+
+    private final ImageIcon CHECK_ICON = new ImageIcon(ImageUtil.getResourceStreamFromClass(getClass(), "/check-icon.png"));
+
     public OsrsStreamersPluginPanel(OsrsStreamersPlugin osrsStreamersPlugin) {
         this.plugin = osrsStreamersPlugin;
         init();
     }
 
-    void init()
+    public void init()
     {
         setLayout(new BorderLayout());
         setBackground(ColorScheme.DARK_GRAY_COLOR);
@@ -108,6 +115,11 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
         addPanel.add(addHereLabel, BorderLayout.WEST);
         addPanel.add(addHereButton, BorderLayout.EAST);
 
+        JPanel tokenButton = VerifiedStreamerPanel.buildVerifiedStreamerPanel(WARNING_ICON, "Invalid/Expired token", "Get new token", TOKEN_GENERATOR_DOMAIN);
+        JPanel tokenPanel = new JPanel(new BorderLayout());
+        tokenPanel.setBorder(new EmptyBorder(1, 0, 10, 0));
+        tokenPanel.add(tokenButton, BorderLayout.CENTER);
+
         final JPanel northPanel = new JPanel(new GridBagLayout());
         northPanel.add(title, constraints);
         constraints.gridy++;
@@ -118,13 +130,41 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
         northPanel.add(Box.createRigidArea(new Dimension(0, 10)), constraints);
         constraints.gridy++;
         northPanel.add(addPanel, constraints);
+        if (this.plugin.streamerHandler.validToken) {
+            JPanel validTokenPanel = new JPanel();
+            validTokenPanel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+            validTokenPanel.setLayout(new BorderLayout());
+            validTokenPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+            JLabel iconLabel = new JLabel(CHECK_ICON);
+            validTokenPanel.add(iconLabel, BorderLayout.WEST);
+            JPanel textContainer = new JPanel();
+            textContainer.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+            textContainer.setLayout(new GridLayout(2, 1));
+            textContainer.setBorder(new EmptyBorder(2, 5, 2, 5));
+            JLabel topLine = new JLabel("Valid token set");
+            topLine.setForeground(Color.WHITE);
+            topLine.setFont(FontManager.getRunescapeSmallFont());
+            JLabel bottomLine = new JLabel("Expires in " + this.plugin.streamerHandler.daysUntilTokenExpiration + " days");
+            bottomLine.setForeground(Color.GRAY);
+            bottomLine.setFont(FontManager.getRunescapeSmallFont());
+            textContainer.add(topLine);
+            textContainer.add(bottomLine);
+            validTokenPanel.add(textContainer, BorderLayout.CENTER);
+
+            constraints.gridy++;
+            northPanel.add(validTokenPanel, constraints);
+        }
+        else {
+            constraints.gridy++;
+            northPanel.add(tokenPanel, constraints);
+        }
+
 
         add(northPanel, BorderLayout.NORTH);
         add(streamersContainer, BorderLayout.CENTER);
         this.updateStreamersList();
 
     }
-
 
     private void updateStreamersList() {
         streamersContainer.removeAll();
@@ -137,7 +177,7 @@ public class OsrsStreamersPluginPanel extends PluginPanel {
         }).collect(Collectors.toList());
 
         filteredStreamers.forEach(streamer -> streamersContainer.add(
-                VerifiedStreamerPanel.buildVerifiedStreamerPanel(TWITCH_ICON, streamer.twitchName, String.join(", ", streamer.characterNames), TWITCH_DOMAIN + streamer.twitchName)));
+                VerifiedStreamerPanel.buildVerifiedStreamerPanel(null, streamer.twitchName, String.join(", ", streamer.characterNames), TWITCH_DOMAIN + streamer.twitchName)));
 
         if (filteredStreamers.isEmpty()) {
             JPanel errorWrapper = new JPanel(new BorderLayout());
