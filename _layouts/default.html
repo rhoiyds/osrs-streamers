@@ -41,13 +41,13 @@
                 </pre>
             </div>
         </div>
-        <img src="resources/plugin-settings.png" alt="Plugin settings">
         <div id="extra_data" class="hide">
+            <img src="resources/plugin-settings.png" alt="Plugin settings">
             <p>How to configure?</p>
-            <blockquote><p>Copy and paste the above token into your OSRS Streamers plugin settings</p></blockquote>
+            <blockquote><p>Copy and paste the above token into your OSRS Streamers plugin settings shown above.</p></blockquote>
             <p>Token expiration</p>
-            <blockquote><p>This token will expire in 60 days - meaning you will have to do this process again in 60 days</p></blockquote>
-            <p>Why is this whole process neccessary?</p>
+            <blockquote><p>This token will expire in 60 days - meaning you will have to do this process again in 60 days.</p></blockquote>
+            <p>Why is this whole process necessary?</p>
             <blockquote><p>Twitch sucks and requires OAuth authorisation for even the most simple of requests.</p></blockquote>
         </div>
       </section>
@@ -66,7 +66,7 @@
             if (parsedHash.get('access_token')) {
                 var access_token = parsedHash.get('access_token');
                 document.getElementById('access_token_container').classList.toggle('hide');
-                document.getElementById('access_token').textContent = access_token;
+                document.getElementById('access_token').textContent = 'Your token: ' + access_token;
                 document.getElementById('extra_data').classList.toggle('hide');
             }
         }
