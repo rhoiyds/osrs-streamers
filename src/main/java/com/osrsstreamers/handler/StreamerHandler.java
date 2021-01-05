@@ -15,6 +15,7 @@ import net.runelite.api.events.PlayerMenuOptionClicked;
 import net.runelite.api.events.PlayerSpawned;
 
 import net.runelite.client.eventbus.Subscribe;
+import net.runelite.client.util.ColorUtil;
 import net.runelite.client.util.LinkBrowser;
 import net.runelite.client.util.Text;
 import net.runelite.http.api.RuneLiteAPI;
@@ -22,6 +23,7 @@ import okhttp3.HttpUrl;
 import okhttp3.Request;
 import okhttp3.Response;
 
+import java.awt.Color;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -29,6 +31,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.ZonedDateTime;
 import java.util.*;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -42,6 +45,8 @@ public class StreamerHandler {
     private static final String TWITCH_USER_QUERY_FIELD = "user_login";
     private static final int MAX_UNSEEN_DURATION_BEFORE_REMOVAL = 1;
     private static final Long TWITCH_API_USER_SEARCH_LIMIT = 100L;
+    private static final Color TWITCH_COLOR = new Color(133, 76, 231);
+    private static final Color OFFLINE_COLOR = new Color(169, 169, 169);
 
     private Map<String, NearbyPlayer> nearbyPlayers;
 
@@ -92,12 +97,22 @@ public class StreamerHandler {
         if (PLAYER_INDICATOR.equals(event.getOption())) {
             NearbyPlayer nearbyPlayer = this.nearbyPlayers.get(Text.removeTags(event.getTarget()).split("[(]")[0].trim());
             if (Objects.nonNull(nearbyPlayer) && !StreamStatus.NOT_STREAMER.equals(nearbyPlayer.getStatus())) {
+
                 if (config.onlyShowStreamersWhoAreLive() && (nearbyPlayer.status.equals(StreamStatus.NOT_LIVE) || nearbyPlayer.status.equals(StreamStatus.STREAMER))) {
                     return;
                 }
                 menuEntries = Arrays.copyOf(menuEntries, menuEntries.length + 1);
                 MenuEntry menuEntry = menuEntries[menuEntries.length - 1] = new MenuEntry();
-                menuEntry.setOption(WATCH_STREAM_ACTION);
+
+                if (config.colorsInMenu()) {
+                    Color color = OFFLINE_COLOR;
+                    if (StreamStatus.LIVE.equals(nearbyPlayer.getStatus())) {
+                        color = TWITCH_COLOR;
+                    }
+                    menuEntry.setOption(ColorUtil.prependColorTag(WATCH_STREAM_ACTION, color));
+                } else {
+                    menuEntry.setOption(WATCH_STREAM_ACTION);
+                }
                 menuEntry.setTarget(event.getTarget());
                 menuEntry.setType(MenuAction.RUNELITE.getId());
                 client.setMenuEntries(menuEntries);
@@ -108,7 +123,7 @@ public class StreamerHandler {
 
     @Subscribe
     public void onPlayerMenuOptionClicked(PlayerMenuOptionClicked event) {
-        if (event.getMenuOption().equals(WATCH_STREAM_ACTION)) {
+        if (event.getMenuOption().contains(WATCH_STREAM_ACTION)) {
             openTwitchStream(Text.removeTags(event.getMenuTarget()));
         }
     }

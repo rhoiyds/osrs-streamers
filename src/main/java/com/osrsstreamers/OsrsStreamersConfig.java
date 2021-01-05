@@ -42,4 +42,15 @@ public interface OsrsStreamersConfig extends Config
 		return false;
 	}
 
+	@ConfigItem(
+			position = 4,
+			keyName = "colorsInMenu",
+			name = "Colors in menu",
+			description = "Show live/not live colors on the 'Twitch' action on the right hand click menu"
+	)
+	default boolean colorsInMenu()
+	{
+		return true;
+	}
+
 }
