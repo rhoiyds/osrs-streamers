@@ -238,10 +238,8 @@ public class OsrsStreamersPlugin extends Plugin
 	{
 		if (developerMode && commandExecuted.getCommand().equals("stream"))
 		{
-			if ("add".equals(commandExecuted.getArguments()[0])) {
-				streamerHandler.addStreamerFromConsole(commandExecuted.getArguments()[1], commandExecuted.getArguments()[2]);
-			}
-
+			String characterNameAndTwitchName = String.join(" ", commandExecuted.getArguments());
+			streamerHandler.addStreamerFromConsole(characterNameAndTwitchName.split("/")[0], characterNameAndTwitchName.split("/")[1]);
 		}
 	}
 
