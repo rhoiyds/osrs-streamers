@@ -2,10 +2,9 @@ package com.osrsstreamers;
 
 import com.google.gson.JsonParseException;
 import com.google.inject.Provides;
+import com.google.gson.Gson;
 import javax.inject.Inject;
 import javax.inject.Named;
-
-import com.google.gson.Gson;
 import com.osrsstreamers.handler.*;
 import com.osrsstreamers.twitch.TwitchAuthenticateResponse;
 import com.osrsstreamers.ui.OsrsStreamersPluginPanel;
@@ -77,6 +76,9 @@ public class OsrsStreamersPlugin extends Plugin
 	@Inject
 	private ChatMessageManager chatMessageManager;
 
+	@Inject
+	private ConfigManager configManager;
+
 	public StreamerHandler streamerHandler;
 
 	private OsrsStreamersPluginPanel panel;
@@ -86,9 +88,10 @@ public class OsrsStreamersPlugin extends Plugin
     private boolean loggingIn;
 
 	private static final String TWITCH_API_URL = "https://id.twitch.tv/oauth2/validate";
+
 	final BufferedImage icon = ImageUtil.getResourceStreamFromClass(getClass(), "/icon.png");
 
-	private Gson gson = new Gson();
+	private final Gson gson = new Gson();
 
 	@Override
 	protected void startUp()
@@ -119,7 +122,7 @@ public class OsrsStreamersPlugin extends Plugin
 
 	private void startHandlingTwitchStreams() {
 		if (Objects.isNull(streamerHandler)) {
-			streamerHandler = new StreamerHandler(client, config);
+			streamerHandler = new StreamerHandler(client, config, configManager);
 			checkTokenValidity();
 			eventBus.register(streamerHandler);
 			this.streamingPlayerOverlay.streamerHandler = streamerHandler;
@@ -244,4 +247,5 @@ public class OsrsStreamersPlugin extends Plugin
 
 		}
 	}
+
 }

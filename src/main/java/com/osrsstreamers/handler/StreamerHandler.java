@@ -14,6 +14,7 @@ import net.runelite.api.events.PlayerDespawned;
 import net.runelite.api.events.PlayerMenuOptionClicked;
 import net.runelite.api.events.PlayerSpawned;
 
+import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.util.ColorUtil;
 import net.runelite.client.util.LinkBrowser;
@@ -50,11 +51,11 @@ public class StreamerHandler {
 
     private Map<String, NearbyPlayer> nearbyPlayers;
 
-    private Client client;
+    private final Client client;
 
-    private OsrsStreamersConfig config;
+    private final OsrsStreamersConfig config;
 
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     public VerifiedStreamers verifiedStreamers;
 
@@ -62,10 +63,10 @@ public class StreamerHandler {
 
     public int daysUntilTokenExpiration;
 
-    public StreamerHandler(Client client, OsrsStreamersConfig config) {
+    public StreamerHandler(Client client, OsrsStreamersConfig config, ConfigManager configManager) {
         this.client = client;
         this.config = config;
-        this.verifiedStreamers = new VerifiedStreamers();
+        this.verifiedStreamers = new VerifiedStreamers(configManager);
         this.nearbyPlayers = new HashMap<>();
         this.addAllNearbyPlayers();
     }
