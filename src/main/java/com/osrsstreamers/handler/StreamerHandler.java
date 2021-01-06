@@ -14,7 +14,6 @@ import net.runelite.api.events.PlayerDespawned;
 import net.runelite.api.events.PlayerMenuOptionClicked;
 import net.runelite.api.events.PlayerSpawned;
 
-import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.util.ColorUtil;
 import net.runelite.client.util.LinkBrowser;
@@ -63,10 +62,10 @@ public class StreamerHandler {
 
     public int daysUntilTokenExpiration;
 
-    public StreamerHandler(Client client, OsrsStreamersConfig config, ConfigManager configManager) {
+    public StreamerHandler(Client client, OsrsStreamersConfig config) {
         this.client = client;
         this.config = config;
-        this.verifiedStreamers = new VerifiedStreamers(configManager);
+        this.verifiedStreamers = new VerifiedStreamers();
         this.nearbyPlayers = new HashMap<>();
         this.addAllNearbyPlayers();
     }

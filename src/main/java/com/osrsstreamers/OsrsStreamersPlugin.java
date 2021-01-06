@@ -76,9 +76,6 @@ public class OsrsStreamersPlugin extends Plugin
 	@Inject
 	private ChatMessageManager chatMessageManager;
 
-	@Inject
-	private ConfigManager configManager;
-
 	public StreamerHandler streamerHandler;
 
 	private OsrsStreamersPluginPanel panel;
@@ -122,7 +119,7 @@ public class OsrsStreamersPlugin extends Plugin
 
 	private void startHandlingTwitchStreams() {
 		if (Objects.isNull(streamerHandler)) {
-			streamerHandler = new StreamerHandler(client, config, configManager);
+			streamerHandler = new StreamerHandler(client, config);
 			checkTokenValidity();
 			eventBus.register(streamerHandler);
 			this.streamingPlayerOverlay.streamerHandler = streamerHandler;
