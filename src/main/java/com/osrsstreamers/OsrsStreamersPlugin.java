@@ -122,7 +122,6 @@ public class OsrsStreamersPlugin extends Plugin
 			streamerHandler = new StreamerHandler(client, config);
 			checkTokenValidity();
 			eventBus.register(streamerHandler);
-			eventBus.register(streamerHandler);
 			this.streamingPlayerOverlay.streamerHandler = streamerHandler;
 			this.streamingPlayerMinimapOverlay.streamerHandler = streamerHandler;
 			overlayManager.add(streamingPlayerOverlay);
