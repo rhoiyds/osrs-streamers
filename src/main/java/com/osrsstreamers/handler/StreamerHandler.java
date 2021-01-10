@@ -124,7 +124,7 @@ public class StreamerHandler {
     @Subscribe
     public void onPlayerMenuOptionClicked(PlayerMenuOptionClicked event) {
         if (event.getMenuOption().contains(WATCH_STREAM_ACTION)) {
-            openTwitchStream(Text.removeTags(event.getMenuTarget()));
+            openTwitchStream(Text.removeTags(event.getMenuTarget()).trim().replace('\u00A0', ' '));
         }
     }
 
