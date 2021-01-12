@@ -30,6 +30,7 @@ import net.runelite.client.ui.ClientToolbar;
 import net.runelite.client.ui.NavigationButton;
 import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.client.util.ImageUtil;
+import net.runelite.client.util.LinkBrowser;
 import net.runelite.http.api.RuneLiteAPI;
 import okhttp3.HttpUrl;
 import okhttp3.Request;
@@ -85,6 +86,10 @@ public class OsrsStreamersPlugin extends Plugin
     private boolean loggingIn;
 
 	private static final String TWITCH_API_URL = "https://id.twitch.tv/oauth2/validate";
+
+	private static final String TOKEN_GENERATOR_URL = "https://rhoiyds.github.io/osrs-streamers/";
+
+	private static final String TOKEN_COMMAND = "gettoken";
 
 	final BufferedImage icon = ImageUtil.getResourceStreamFromClass(getClass(), "/icon.png");
 
@@ -158,7 +163,7 @@ public class OsrsStreamersPlugin extends Plugin
             loggingIn = false;
             final String message = new ChatMessageBuilder()
                     .append(ChatColorType.HIGHLIGHT)
-                    .append("OSRS Streamers: Invalid/expired Twitch token - fix in the plugin settings.")
+                    .append("OSRS Streamers: Invalid/expired Twitch token - type the command ::" + TOKEN_COMMAND + " in chat to generate a token.")
                     .build();
             chatMessageManager.queue(
                     QueuedMessage.builder()
@@ -240,6 +245,10 @@ public class OsrsStreamersPlugin extends Plugin
 		{
 			String characterNameAndTwitchName = String.join(" ", commandExecuted.getArguments());
 			streamerHandler.addStreamerFromConsole(characterNameAndTwitchName.split("/")[0], characterNameAndTwitchName.split("/")[1]);
+		}
+
+		if (commandExecuted.getCommand().equals(TOKEN_COMMAND)) {
+			LinkBrowser.browse(TOKEN_GENERATOR_URL);
 		}
 	}
 
