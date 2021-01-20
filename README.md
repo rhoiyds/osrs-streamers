@@ -1,7 +1,5 @@
-# OSRS Streamers
-_A plugin used to identify in-game characters that are used by Twitch streamers._
-
-***
+# OSRS Streamers  [![Plugin Installs](http://img.shields.io/endpoint?url=https://i.pluginhub.info/shields/installs/plugin/osrs-streamers)](https://runelite.net/plugin-hub/Rhoiyds) [![Plugin Rank](http://img.shields.io/endpoint?url=https://i.pluginhub.info/shields/rank/plugin/osrs-streamers)](https://runelite.net/plugin-hub)
+_Highlight characters that are used by Twitch streamers, link to their streams, and show if they're live - all in real time!_
 
 ## Features
 
