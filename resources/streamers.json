@@ -873,7 +873,7 @@
     "twitchName": "BladeBTW",
     "characterNames": [
       "Mystic Blade",
-      "Xeric Blade",
+      "Xor Blade",
       "Epic Blade",
       "Magic Blade",
       "Garlic Blade",
@@ -1691,7 +1691,7 @@
     "twitchName": "RickJnr",
     "characterNames": [
       "rickjnr",
-      "rickt"
+      "Rickt"
     ]
   },
   {
@@ -16779,6 +16779,13 @@
     "twitchName": "zaaaaaack",
     "characterNames": [
       "Zaaack"
+    ]
+  },
+  {
+    "twitchName": "easygirls",
+    "characterNames": [
+      "Easy Girls",
+      "sock sniffer"
     ]
   }
 ]
