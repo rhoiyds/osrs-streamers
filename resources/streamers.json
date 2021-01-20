@@ -581,7 +581,6 @@
   {
     "twitchName": "Purpp",
     "characterNames": [
-      "Purpp",
       "Purpp"
     ]
   },
@@ -606,13 +605,6 @@
       "Manked",
       "SebbyWooWoo",
       "PvP V Zuk"
-    ]
-  },
-  {
-    "twitchName": "WhaleSteamrolledTailFirst",
-    "characterNames": [
-      "Trashcan",
-      "G ARBAGE"
     ]
   },
   {
@@ -2796,7 +2788,6 @@
   {
     "twitchName": "IgnobleSolid",
     "characterNames": [
-      "IgnobleSolid",
       "IgnobleSolid"
     ]
   },
@@ -11087,12 +11078,6 @@
     ]
   },
   {
-    "twitchName": "techfreaktwo",
-    "characterNames": [
-      "TechFreakTwo"
-    ]
-  },
-  {
     "twitchName": "IAmDAKingz",
     "characterNames": [
       "NiteVision"
@@ -14003,12 +13988,6 @@
     ]
   },
   {
-    "twitchName": "BladeOvEternalDarknexx",
-    "characterNames": [
-      "L33T_ K1LL4"
-    ]
-  },
-  {
     "twitchName": "BlumoGaming",
     "characterNames": [
       "X Y ZB"
@@ -16654,7 +16633,8 @@
   {
     "twitchName": "Whale",
     "characterNames": [
-      "G ARBAGE"
+      "G ARBAGE",
+      "Trashcan"
     ]
   },
   {
