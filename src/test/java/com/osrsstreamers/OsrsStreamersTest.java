@@ -29,7 +29,7 @@ public class OsrsStreamersTest
 	public void testStreamerNamesUnique() throws FileNotFoundException {
 		BufferedReader br = new BufferedReader(new FileReader("resources/streamers.json"));
 		Streamer[] streamers = new Gson().fromJson(br, Streamer[].class);
-		List<String> twitchNames = Arrays.stream(streamers).map(streamer -> streamer.twitchName).collect((Collectors.toList()));
+		List<String> twitchNames = Arrays.stream(streamers).map(streamer -> streamer.twitchName.toLowerCase()).collect((Collectors.toList()));
 		List<String> nonDistinctStreamers = twitchNames.stream().filter(i -> Collections.frequency(twitchNames, i) > 1).collect(Collectors.toList());
 		assertEquals(Collections.EMPTY_LIST, nonDistinctStreamers);
 	}
