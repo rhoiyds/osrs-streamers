@@ -31,6 +31,8 @@ Streamers wishing to have their characters identified by the plug-in should fill
 
     Character name 2
     (Link to video of streamer playing on Character 2)
+    
+Additionally, the machine learning powered [OSRS Streamers Backend](https://rhoiyds.github.io/osrs-streamers-backend) project is crawling Twitch once every hour. If the bot detects a Twitch streamer playing with a character not verified by OSRS Streamers, it will be queued for manual review and likely added a few days later manually.
 
 ## Issues and feature requests
 Please use the GitHub Issues tab to log any bugs you encounter. Additionally, if you have any ideas or improvements please also log it as a feature request in GitHub Issues - I’m open to any improvements.
