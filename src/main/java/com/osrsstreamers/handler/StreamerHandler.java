@@ -9,9 +9,10 @@ import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.api.MenuAction;
 import net.runelite.api.MenuEntry;
+import net.runelite.api.Player;
 import net.runelite.api.events.MenuEntryAdded;
+import net.runelite.api.events.MenuOptionClicked;
 import net.runelite.api.events.PlayerDespawned;
-import net.runelite.api.events.PlayerMenuOptionClicked;
 import net.runelite.api.events.PlayerSpawned;
 
 import net.runelite.client.eventbus.Subscribe;
@@ -113,6 +114,7 @@ public class StreamerHandler {
                 } else {
                     menuEntry.setOption(WATCH_STREAM_ACTION);
                 }
+                menuEntry.setIdentifier(event.getIdentifier());
                 menuEntry.setTarget(event.getTarget());
                 menuEntry.setType(MenuAction.RUNELITE.getId());
                 client.setMenuEntries(menuEntries);
@@ -122,9 +124,13 @@ public class StreamerHandler {
     }
 
     @Subscribe
-    public void onPlayerMenuOptionClicked(PlayerMenuOptionClicked event) {
+    public void onMenuOptionClicked(MenuOptionClicked event) {
         if (event.getMenuOption().contains(WATCH_STREAM_ACTION)) {
-            openTwitchStream(Text.removeTags(event.getMenuTarget()).trim().replace('\u00A0', ' '));
+            Player p = client.getCachedPlayers()[event.getId()];
+            if (p == null) {
+                return;
+            }
+            openTwitchStream(p.getName());
         }
     }
 
