@@ -3728,12 +3728,6 @@
     ]
   },
   {
-    "twitchName": "MetalGuitarMax ",
-    "characterNames": [
-      "Maxed Well"
-    ]
-  },
-  {
     "twitchName": "Idyl_",
     "characterNames": [
       "Watch Idyl",
@@ -15718,7 +15712,6 @@
     "characterNames": [
       "meathammer32",
       "Potato Patch",
-      "relmus",
       "Meathammer39",
       "Potato Simp",
       "2 0s On 1HP",
@@ -22334,6 +22327,82 @@
     "twitchName": "zodden88",
     "characterNames": [
       "Zodden"
+    ]
+  },
+  {
+    "twitchName": "AndyManzi",
+    "characterNames": [
+      "La Vie BAOIM"
+    ]
+  },
+  {
+    "twitchName": "imstuckup",
+    "characterNames": [
+      "Stuckup"
+    ]
+  },
+  {
+    "twitchName": "p4chx_x",
+    "characterNames": [
+      "P4cH"
+    ]
+  },
+  {
+    "twitchName": "eow_",
+    "characterNames": [
+      "E Ow",
+      "eow btw"
+    ]
+  },
+  {
+    "twitchName": "TuxRS",
+    "characterNames": [
+      "Tux"
+    ]
+  },
+  {
+    "twitchName": "Mofoe",
+    "characterNames": [
+      "PauseShake",
+      "Mofoe"
+    ]
+  },
+  {
+    "twitchName": "PotatohimeRS",
+    "characterNames": [
+      "Potatohime",
+      "EffortLocked"
+    ]
+  },
+  {
+    "twitchName": "MaxedWell",
+    "characterNames": [
+      "Maxed Well"
+    ]
+  },
+  {
+    "twitchName": "LiveEscapes",
+    "characterNames": [
+      "Gunter"
+    ]
+  },
+  {
+    "twitchName": "Run4Less",
+    "characterNames": [
+      "Sloppi"
+    ]
+  },
+  {
+    "twitchName": "joopXswag",
+    "characterNames": [
+      "relmus"
+    ]
+  },
+  {
+    "twitchName": "RSN_Radishboy",
+    "characterNames": [
+      "Radishboy",
+      "The Pet Guy"
     ]
   }
 ]
