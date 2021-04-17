@@ -3076,12 +3076,6 @@
     ]
   },
   {
-    "twitchName": "iFreedive_OSRS",
-    "characterNames": [
-      "iFreedive"
-    ]
-  },
-  {
     "twitchName": "reknalp",
     "characterNames": [
       "reknalp",
@@ -15844,7 +15838,6 @@
   {
     "twitchName": "stewie_5",
     "characterNames": [
-      "Demon",
       "Trout Demon"
     ]
   },
@@ -22403,6 +22396,43 @@
     "characterNames": [
       "Radishboy",
       "The Pet Guy"
+    ]
+  },
+  {
+    "twitchName": "skuller_rs",
+    "characterNames": [
+      "Skuller"
+    ]
+  },
+  {
+    "twitchName": "gangstamo13",
+    "characterNames": [
+      "gangstamo13"
+    ]
+  },
+  {
+    "twitchName": "leafofguam",
+    "characterNames": [
+      "Guam of Leaf"
+    ]
+  },
+  {
+    "twitchName": "iFreedive_OSRS",
+    "characterNames": [
+      "iFreedive",
+      "Oven Locked"
+    ]
+  },
+  {
+    "twitchName": "Sponges_Ow",
+    "characterNames": [
+      "Jodi"
+    ]
+  },
+  {
+    "twitchName": "ershnip12",
+    "characterNames": [
+      "life on xx"
     ]
   }
 ]
