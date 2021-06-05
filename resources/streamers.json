@@ -862,12 +862,6 @@
     ]
   },
   {
-    "twitchName": "Kimmynator",
-    "characterNames": [
-      "Kimmynator"
-    ]
-  },
-  {
     "twitchName": "Nomad",
     "characterNames": [
       "Nomad3Head",
@@ -1109,12 +1103,6 @@
     "twitchName": "pomatomaster",
     "characterNames": [
       "Pomatomaster"
-    ]
-  },
-  {
-    "twitchName": "Brii",
-    "characterNames": [
-      "Brianana"
     ]
   },
   {
@@ -2918,7 +2906,8 @@
     "twitchName": "DJ_N3m3sis",
     "characterNames": [
       "DontDieDJ",
-      "djwillreturn"
+      "djwillreturn",
+      "0nlySpoons"
     ]
   },
   {
@@ -4061,7 +4050,8 @@
   {
     "twitchName": "DaddyFatSack",
     "characterNames": [
-      "The FatSack"
+      "The FatSack",
+      "Sir Fat Nuts"
     ]
   },
   {
@@ -4492,7 +4482,8 @@
   {
     "twitchName": "pidbullz",
     "characterNames": [
-      "Iron Pidbull"
+      "Iron Pidbull",
+      "UIM Pidbull"
     ]
   },
   {
@@ -4885,10 +4876,7 @@
   {
     "twitchName": "ScuffeeTV",
     "characterNames": [
-      "Scuffee",
-      "Crafty1",
-      "Prangers",
-      "Territawq"
+      "Scuffee"
     ]
   },
   {
@@ -4916,13 +4904,6 @@
     "twitchName": "daisyfletchy",
     "characterNames": [
       "daisyfletchy"
-    ]
-  },
-  {
-    "twitchName": "Elfyosrs",
-    "characterNames": [
-      "Mystic Elfy",
-      "Wild Elfy"
     ]
   },
   {
@@ -5081,8 +5062,7 @@
   {
     "twitchName": "RS_ZING",
     "characterNames": [
-      "Savage Ducki",
-      "Peppey"
+      "Savage Ducki"
     ]
   },
   {
@@ -8428,12 +8408,6 @@
     "twitchName": "PamoPopp",
     "characterNames": [
       "pamop"
-    ]
-  },
-  {
-    "twitchName": "zuned11",
-    "characterNames": [
-      "zuned11"
     ]
   },
   {
@@ -12246,12 +12220,6 @@
     ]
   },
   {
-    "twitchName": "AnadroJ",
-    "characterNames": [
-      "9L2"
-    ]
-  },
-  {
     "twitchName": "nicebeing",
     "characterNames": [
       "Watch The OA",
@@ -13677,12 +13645,6 @@
     ]
   },
   {
-    "twitchName": "2277",
-    "characterNames": [
-      "K7"
-    ]
-  },
-  {
     "twitchName": "baineofdover",
     "characterNames": [
       "Hunter Guy"
@@ -14401,12 +14363,6 @@
     ]
   },
   {
-    "twitchName": "Medicate_d",
-    "characterNames": [
-      "Medicate d"
-    ]
-  },
-  {
     "twitchName": "MillieLys",
     "characterNames": [
       "millielys"
@@ -14703,7 +14659,8 @@
   {
     "twitchName": "AllRanger",
     "characterNames": [
-      "AllRanger"
+      "AllRanger",
+      "AIIRanger"
     ]
   },
   {
@@ -15443,13 +15400,6 @@
     "twitchName": "johnwwick2223",
     "characterNames": [
       "JohnWWick"
-    ]
-  },
-  {
-    "twitchName": "justLuckyiguess",
-    "characterNames": [
-      "Stylxst",
-      "Leviathan XL"
     ]
   },
   {
@@ -20569,12 +20519,6 @@
     ]
   },
   {
-    "twitchName": "Drinkss",
-    "characterNames": [
-      "Free Drinks"
-    ]
-  },
-  {
     "twitchName": "DroEskimoStreams",
     "characterNames": [
       "Cxnfig"
@@ -21487,12 +21431,6 @@
     "twitchName": "W4rmic3",
     "characterNames": [
       "YuSkulldBro"
-    ]
-  },
-  {
-    "twitchName": "Warshan",
-    "characterNames": [
-      "Warshan"
     ]
   },
   {
@@ -22433,6 +22371,364 @@
     "twitchName": "ershnip12",
     "characterNames": [
       "life on xx"
+    ]
+  },
+  {
+    "twitchName": "OGROCKSTAR56",
+    "characterNames": [
+      "OGRockstar"
+    ]
+  },
+  {
+    "twitchName": "thekongoslice",
+    "characterNames": [
+      "kongosliced"
+    ]
+  },
+  {
+    "twitchName": "kimmynator",
+    "characterNames": [
+      "Kimmynator",
+      "Adirtyslut"
+    ]
+  },
+  {
+    "twitchName": "Snooperal",
+    "characterNames": [
+      "NeoSnoop",
+      "Snooperal"
+    ]
+  },
+  {
+    "twitchName": "TheChamboSlice",
+    "characterNames": [
+      "x Chambo x"
+    ]
+  },
+  {
+    "twitchName": "defqonlord",
+    "characterNames": [
+      "Defqonlord"
+    ]
+  },
+  {
+    "twitchName": "Enchrio1",
+    "characterNames": [
+      "EnchrioOSRS"
+    ]
+  },
+  {
+    "twitchName": "2277",
+    "characterNames": [
+      "K7",
+      "Dab"
+    ]
+  },
+  {
+    "twitchName": "Loadlovinglarper",
+    "characterNames": [
+      "Bopla"
+    ]
+  },
+  {
+    "twitchName": "GL_fam",
+    "characterNames": [
+      "GL fam",
+      "BH fam",
+      "NH fam"
+    ]
+  },
+  {
+    "twitchName": "Foxxi",
+    "characterNames": [
+      "Faxxi"
+    ]
+  },
+  {
+    "twitchName": "AzureDaddy",
+    "characterNames": [
+      "AzureDaddy"
+    ]
+  },
+  {
+    "twitchName": "SoNiC_kp3",
+    "characterNames": [
+      "SoNiC Kp3"
+    ]
+  },
+  {
+    "twitchName": "FounderShayne",
+    "characterNames": [
+      "TheNewMelio",
+      "Melio",
+      "MelioTheVoid"
+    ]
+  },
+  {
+    "twitchName": "brii",
+    "characterNames": [
+      "brianana"
+    ]
+  },
+  {
+    "twitchName": "TreyColor",
+    "characterNames": [
+      "TreyColor"
+    ]
+  },
+  {
+    "twitchName": "HeyTeddy15",
+    "characterNames": [
+      "iPlayRS2Slay",
+      "HeyTeddy15"
+    ]
+  },
+  {
+    "twitchName": "KAPPA3M",
+    "characterNames": [
+      "im young"
+    ]
+  },
+  {
+    "twitchName": "SealOSRS",
+    "characterNames": [
+      "Real Seal"
+    ]
+  },
+  {
+    "twitchName": "GKRevs",
+    "characterNames": [
+      "GKRevs",
+      "Fe GKRevs",
+      "Boomer kumer"
+    ]
+  },
+  {
+    "twitchName": "Hayley 2",
+    "characterNames": [
+      "HC Frog"
+    ]
+  },
+  {
+    "twitchName": "OSRS_Andu",
+    "characterNames": [
+      "Mr Bootyhole"
+    ]
+  },
+  {
+    "twitchName": "zuned11",
+    "characterNames": [
+      "zuned11"
+    ]
+  },
+  {
+    "twitchName": "qdwe_",
+    "characterNames": [
+      "401F3"
+    ]
+  },
+  {
+    "twitchName": "sublimelyop",
+    "characterNames": [
+      "RS Sublime",
+      "Eclipse Cat"
+    ]
+  },
+  {
+    "twitchName": "Dark_Apeture",
+    "characterNames": [
+      "sgs21"
+    ]
+  },
+  {
+    "twitchName": "bratvdbuurt",
+    "characterNames": [
+      "im ir0nn"
+    ]
+  },
+  {
+    "twitchName": "justicenstreami",
+    "characterNames": [
+      "ninjawizardi"
+    ]
+  },
+  {
+    "twitchName": "lowfpsgamer123",
+    "characterNames": [
+      "Opus 2021"
+    ]
+  },
+  {
+    "twitchName": "th36os",
+    "characterNames": [
+      "New0rder"
+    ]
+  },
+  {
+    "twitchName": "Xeriqs",
+    "characterNames": [
+      "Xeriqz",
+      "Drop Ahrims"
+    ]
+  },
+  {
+    "twitchName": "tommyhales",
+    "characterNames": [
+      "iron origin",
+      "kurorequiem"
+    ]
+  },
+  {
+    "twitchName": "AnadroJ",
+    "characterNames": [
+      "9L2",
+      "L4F",
+      "LF4"
+    ]
+  },
+  {
+    "twitchName": "tanoakfe",
+    "characterNames": [
+      "tanoakfe"
+    ]
+  },
+  {
+    "twitchName": "Jeune-Yann",
+    "characterNames": [
+      "Le Junkie"
+    ]
+  },
+  {
+    "twitchName": "Medicate_d",
+    "characterNames": [
+      "Medicate d",
+      "Ded Clicks"
+    ]
+  },
+  {
+    "twitchName": "tyler2moons",
+    "characterNames": [
+      "Tyler 2Moons"
+    ]
+  },
+  {
+    "twitchName": "chefjake_",
+    "characterNames": [
+      "Chef J ake"
+    ]
+  },
+  {
+    "twitchName": "Hootku",
+    "characterNames": [
+      "Hootku"
+    ]
+  },
+  {
+    "twitchName": "ElfyOSRS",
+    "characterNames": [
+      "Mystic Elfy",
+      "Wild Elfy",
+      "ElfyIsThicc"
+    ]
+  },
+  {
+    "twitchName": "doreck",
+    "characterNames": [
+      "lonelydoreck"
+    ]
+  },
+  {
+    "twitchName": "Zigamor",
+    "characterNames": [
+      "I Beat Covid"
+    ]
+  },
+  {
+    "twitchName": "diminishedrs",
+    "characterNames": [
+      "Coders"
+    ]
+  },
+  {
+    "twitchName": "Drinkss",
+    "characterNames": [
+      "Free Drinks",
+      "DRUNK N H4RD"
+    ]
+  },
+  {
+    "twitchName": "stickersplays",
+    "characterNames": [
+      "phalangeking"
+    ]
+  },
+  {
+    "twitchName": "papilangkous",
+    "characterNames": [
+      "papilangkous",
+      "papipurekous"
+    ]
+  },
+  {
+    "twitchName": "AlexisDeiRey",
+    "characterNames": [
+      "aPieceOfWork",
+      "AlexisDelRey"
+    ]
+  },
+  {
+    "twitchName": "ColeworldCJ",
+    "characterNames": [
+      "coleworldcj"
+    ]
+  },
+  {
+    "twitchName": "Maymito",
+    "characterNames": [
+      "King Maymito"
+    ]
+  },
+  {
+    "twitchName": "soggyeggo99",
+    "characterNames": [
+      "soggyeggo"
+    ]
+  },
+  {
+    "twitchName": "darkboardseven",
+    "characterNames": [
+      "darkboard7"
+    ]
+  },
+  {
+    "twitchName": "warshan",
+    "characterNames": [
+      "Warshan"
+    ]
+  },
+  {
+    "twitchName": "fatdadirl",
+    "characterNames": [
+      "Bearjoo"
+    ]
+  },
+  {
+    "twitchName": "ChrisFrmTexas",
+    "characterNames": [
+      "AutisticMed"
+    ]
+  },
+  {
+    "twitchName": "itsmrvpr",
+    "characterNames": [
+      "123gp"
+    ]
+  },
+  {
+    "twitchName": "SirButler123",
+    "characterNames": [
+      "SirButler123",
+      "SirButlerBTW"
     ]
   }
 ]
