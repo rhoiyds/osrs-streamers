@@ -14786,7 +14786,8 @@
     "twitchName": "Ragec0ld",
     "characterNames": [
       "Xeric Rage",
-      "RageLoff"
+      "RageLoff",
+      "RageCold"
     ]
   },
   {
@@ -18327,11 +18328,14 @@
     ]
   },
   {
-    "twitchName": "RS_Slushiiii",
+    "twitchName": "slushiiiibtw",
     "characterNames": [
       "Prewerkout",
       "Slushiiii",
-      "HCIM To Zuk"
+      "HCIM To Zuk",
+      "Ratification",
+      "Sub 2 Slush",
+      "Workout Rat"
     ]
   },
   {
@@ -22624,7 +22628,7 @@
     ]
   },
   {
-    "twitchName": "ElfyOSRS",
+    "twitchName": "Elisa",
     "characterNames": [
       "Mystic Elfy",
       "Wild Elfy",
@@ -22729,6 +22733,12 @@
     "characterNames": [
       "SirButler123",
       "SirButlerBTW"
+    ]
+  },
+  {
+    "twitchName": "beckyosrs",
+    "characterNames": [
+      "Zilyana"
     ]
   }
 ]
