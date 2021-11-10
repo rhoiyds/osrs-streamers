@@ -1164,13 +1164,6 @@
     ]
   },
   {
-    "twitchName": "JacobSuul",
-    "characterNames": [
-      "Jacob Suul",
-      "suulvara"
-    ]
-  },
-  {
     "twitchName": "JoeWatermelon",
     "characterNames": [
       "JowatBTW"
@@ -1769,7 +1762,8 @@
   {
     "twitchName": "moove_over",
     "characterNames": [
-      "casinocuck"
+      "casinocuck",
+      "PixelPussy"
     ]
   },
   {
@@ -2368,12 +2362,6 @@
     "characterNames": [
       "Collier96",
       "Collierss"
-    ]
-  },
-  {
-    "twitchName": "Feargasm_",
-    "characterNames": [
-      "Feargasm"
     ]
   },
   {
@@ -4671,7 +4659,8 @@
   {
     "twitchName": "The_MrChubbs",
     "characterNames": [
-      "Mr Iron Diet"
+      "Mr Iron Diet",
+      "HCGIM Chubbs"
     ]
   },
   {
@@ -7513,7 +7502,8 @@
   {
     "twitchName": "PSacz",
     "characterNames": [
-      "PSucz"
+      "PSucz",
+      "PSacz"
     ]
   },
   {
@@ -8337,12 +8327,6 @@
     ]
   },
   {
-    "twitchName": "janaconda",
-    "characterNames": [
-      "jannifer"
-    ]
-  },
-  {
     "twitchName": "WegCdbCdib",
     "characterNames": [
       "WegCdbCdib"
@@ -8886,12 +8870,6 @@
     "twitchName": "argonaut_hero_",
     "characterNames": [
       "ScrubMaLord"
-    ]
-  },
-  {
-    "twitchName": "Megan_Jerni",
-    "characterNames": [
-      "megan_jerni"
     ]
   },
   {
@@ -15854,12 +15832,6 @@
     ]
   },
   {
-    "twitchName": "thievinghost",
-    "characterNames": [
-      "Kataphatic"
-    ]
-  },
-  {
     "twitchName": "titchyeloise",
     "characterNames": [
       "titchyeloise"
@@ -22817,12 +22789,6 @@
     ]
   },
   {
-    "twitchName": "The_MrChubbs",
-    "characterNames": [
-      "HCGIM Chubbs"
-    ]
-  },
-  {
     "twitchName": "NofanTV",
     "characterNames": [
       "Nofan"
@@ -22873,12 +22839,6 @@
     ]
   },
   {
-    "twitchName": "PSacz",
-    "characterNames": [
-      "PSacz"
-    ]
-  },
-  {
     "twitchName": "nilmar_",
     "characterNames": [
       "Nilmar G I M"
@@ -22893,19 +22853,15 @@
       "Rooftop Man4",
       "Rooftop Man5",
       "Rooftop Man6",
-      "http suul tv"
+      "http suul tv",
+      "Jacob Suul",
+      "suulvara"
     ]
   },
   {
     "twitchName": "EViL_Gamer_TV",
     "characterNames": [
       "EViL GamerTV"
-    ]
-  },
-  {
-    "twitchName": "moove_over",
-    "characterNames": [
-      "PixelPussy"
     ]
   },
   {
@@ -23034,7 +22990,8 @@
       "MeganJerni",
       "xBenSimp69x",
       "GIMeganJerni",
-      "MainMegan"
+      "MainMegan",
+      "megan_jerni"
     ]
   },
   {
@@ -23049,6 +23006,13 @@
       "Tanoak",
       "Tanoak HC",
       "Tanoak alt"
+    ]
+  },
+  {
+    "twitchName": "joshstrifehayes",
+    "characterNames": [
+      "J Strife H",
+      "GIM JSH"
     ]
   }
 ]
