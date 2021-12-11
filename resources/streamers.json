@@ -21196,7 +21196,8 @@
   {
     "twitchName": "StrawhatDany",
     "characterNames": [
-      "StrawhatDany"
+      "StrawhatDany",
+      "HardStrawHat"
     ]
   },
   {
@@ -22705,7 +22706,9 @@
   {
     "twitchName": "ChrisFrmTexas",
     "characterNames": [
-      "AutisticMed"
+      "AutisticMed",
+      "BBCDidYoWife",
+      "DaddyMed"
     ]
   },
   {
@@ -23098,6 +23101,54 @@
     "characterNames": [
       "Adamogus",
       "AdaMaZe"
+    ]
+  },
+  {
+    "twitchName": "Ronin5amura1",
+    "characterNames": [
+      "Ronin5amura1"
+    ]
+  },
+  {
+    "twitchName": "Aerilym",
+    "characterNames": [
+      "Aerilym"
+    ]
+  },
+  {
+    "twitchName": "JackRabbit97",
+    "characterNames": [
+      "I tried XD"
+    ]
+  },
+  {
+    "twitchName": "Spraying_mantis",
+    "characterNames": [
+      "MilkMyMelons"
+    ]
+  },
+  {
+    "twitchName": "magiknightman",
+    "characterNames": [
+      "knightorday"
+    ]
+  },
+  {
+    "twitchName": "badpvmr",
+    "characterNames": [
+      "Badpvmr"
+    ]
+  },
+  {
+    "twitchName": "Emma",
+    "characterNames": [
+      "Emma0_o"
+    ]
+  },
+  {
+    "twitchName": "Marlontas",
+    "characterNames": [
+      "Iron Marlon"
     ]
   }
 ]
